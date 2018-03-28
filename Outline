@@ -1,0 +1,15 @@
+Outline for my part:
+
+  1. Collect data from view, whether it be a username/password or survey answer.
+  2. Check to see if an error should be thrown; i.e., if a u/p is not correct, give an error message, or if a survey 
+     question asks for a number and user gives alphanumeric, give error message.
+  3. If data passes error test, give data to back-end to collect.
+  4. If back-end has data to be given back to user, collect and give to view to let user know what happened.
+
+
+Research completed: 
+
+  1. Learn more about converting JSON and searching for a good program already written to do this.
+  2. Begin to understand how exactly to give info to back-end (i.e., convert username/password requests to be put in csv file
+     to be easily checked by back-end.
+  3. Start working in IntelliJ with test code.
