@@ -13,3 +13,4 @@ Research completed:
   2. Begin to understand how exactly to give info to back-end (i.e., convert username/password requests to be put in csv file
      to be easily checked by back-end.
   3. Start working in IntelliJ with net demo example.
+  4. Read through https://craftsmen.nl/kotlin-create-rest-services-using-jersey-and-jackson/ as needed.
