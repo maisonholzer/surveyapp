@@ -1,11 +1,4 @@
-This is the default README for 
-the group project. As you can see,
-it has no content about the project.
-
-As your group makes progress on the
-project, you should change this file
-to document the plans and features 
-in each iteration of development.
+3/30/2018 :First project contribution: Our group decided to create 4 branches for 4 different parts(Android, Controller, Back end, Non-Android). Since we are still on the research phase this week, we think for now it's better to leave our branches that way without merging it to the master. 
 
 Team Members and Roles:
 
