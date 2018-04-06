@@ -7,6 +7,7 @@ package edu.uiowa.cs
 //   JSON, Jackson, IP address, Port number
 // (these will be covered in class, so you can take notes then)
 
+/** Start collecting backend files and getting them to work within our combined app **/
 import javax.ws.rs.*
 import javax.ws.rs.core.MediaType.APPLICATION_JSON
 import javax.ws.rs.core.Application
@@ -36,14 +37,11 @@ class UserResource {
     init {
         // sneaky: the "+=" turns into a call to the put method of
         // the HashMap, which can take a Pair(key,value) as argument
-        users += "Iowa" to User("Iowa", "secret", 25)
-        // Creating new users to test
-        users += "Bob" to User("Bob", "abc", 30)
-        users += "Alice" to User ("Alice", "12345", 31)
+        users += "Iowa" to User("Iowa", "secret")
     }
 
     @GET @Path("{username}")
-    // Test in browser with http://localhost:8080/users/Iowa
+            // Test in browser with http://localhost:8080/users/Iowa
     fun getUser(@PathParam("username") username: String): User? {
         println("Get " + "$username")
         return users[username]
@@ -53,20 +51,8 @@ class UserResource {
         // annotation above says @Produces(APPLICATION_JSON)
     }
 
-    /** A duplicate of getUser, but with a different @Path **/
-    @GET @Path("get/{username}")  // Test in browser with http://localhost:8080/users/get/Iowa
-    fun getUser2(@PathParam("username") username: String): User? {
-        println("Get2 " + "$username")
-        return users[username]
-        }
-
-
     @POST @Path("create")
     @Consumes(APPLICATION_JSON)
-    // Test with unix command:
-    // curl -H "Content-Type: application/json" -X POST
-    // -d '{"username":"Bob","password":"Mo","age":21}'
-    // -L http://localhost:8080/users/create
     fun createUser(user: User) {
         // JAX-RS will take the body (in JSON) and convert
         // into a User object, named as parameter "user" here
@@ -106,9 +92,9 @@ object NettyServer {
         // val resourceConfig = ResourceConfig.forApplication(JerseyApplication())
         val resourceConfig = ResourceConfig.forApplication(JerseyApplication())
                 .register(
-                    ContextResolver<ObjectMapper> {
-                      ObjectMapper().registerModule(KotlinModule()) }
-                    )
+                        ContextResolver<ObjectMapper> {
+                            ObjectMapper().registerModule(KotlinModule()) }
+                )
         val server = NettyHttpContainerProvider.createHttp2Server(URI.create("http://localhost:8080/"), resourceConfig, null)
         Runtime.getRuntime().addShutdownHook(Thread(Runnable { server.close() }))
     }
