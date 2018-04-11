@@ -24,18 +24,18 @@ class User1 {
     constructor() {
         this.username = ""; this.password = ""; this.surveys = null
     }
-    override fun toString() = "player(username=$username,password=$password,rating=$surveys)"
+    override fun toString() = "player(username=$username,password=$password)"
 }
 class AllUsers {
     val username: String;
     val new: Boolean;
-    val users: List<User1>
+    val users: List<User>
 
-    constructor(username: String, new: Boolean, users: List<User1>) {
+    constructor(username: String, new: Boolean, users: List<User>) {
         this.username = username; this.new = new; this.users = users
     }
     constructor() {
-        this.username = ""; this.new = false; this.users = listOf<User1>()
+        this.username = ""; this.new = false; this.users = listOf<User>()
     }
     override fun toString(): String {
         var r = "team(username=$username,new=$new,users=["
@@ -47,8 +47,8 @@ class AllUsers {
 }
 
 fun JAXteamToJson():String {
-    val olaf = User1("Olaf","123",listOf("survey1"))
-    val sven = User1("Sven","78922", listOf("survey1", "survey2"))
+    val olaf = User("Olaf","123")//listOf("survey1"))
+    val sven = User("Sven","78922")//listOf("survey1", "survey2"))
     val bears = AllUsers("Bears",true,listOf(olaf,sven))
     // using Jackson 2 library for object to Json
     val mapper = ObjectMapper()
@@ -65,8 +65,8 @@ fun JAXjsonToTeam(jsonstring: String): AllUsers {
 }
 
 fun GteamToJSON():String {
-    val gufi = User1("Gufi","hey",null)
-    val gita = User1("Gita","hello",null)
+    val gufi = User("Gufi","hey")
+    val gita = User("Gita","hello")
     val zinc = AllUsers("Zinc",true,listOf(gufi,gita))
     // using Gson library for object to Json
     val mapper = Gson()

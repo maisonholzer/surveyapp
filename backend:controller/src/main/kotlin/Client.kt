@@ -8,6 +8,7 @@ import javax.ws.rs.client.ClientRequestContext
 import javax.ws.rs.client.ClientRequestFilter
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.KotlinModule
+import java.net.PasswordAuthentication
 import javax.ws.rs.ext.ContextResolver
 
 class LoggingFilter: ClientRequestFilter {
@@ -41,7 +42,30 @@ class RestClient {
                 .path("create")
                 .request(MediaType.APPLICATION_JSON)
                 .post(Entity.entity(user, MediaType.APPLICATION_JSON))
+
     }
+
+    fun authenticateLogin(user: User, inputUsername: String, inputPassword: String): Response? {
+        if (inputUsername == user.username && inputPassword == user.pass) {
+            println("Logging you in...")
+            return client
+                    .target(REST_URI)
+                    .path("{username}/login")
+                    .request(MediaType.APPLICATION_JSON)
+                    .post(Entity.entity(user, MediaType.APPLICATION_JSON))
+        }
+        if (inputUsername != user.username) {
+            println("Username not found")
+        }
+        if (inputUsername != user.username && inputPassword != user.pass) {
+            println("Password is incorrect")
+        }
+        else {
+            println("Error...")
+            return null
+        }
+    }
+    
     fun getSurvey(user: User): Response {
         return client
                 .target(REST_URI)

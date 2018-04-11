@@ -58,6 +58,7 @@ class UserResource {
         // into a User object, named as parameter "user" here
         // (it's done using KotlinModule, set up below)
         users += user.username to user
+        createClient(user.username, user.pass)
         println("Created: " + "$user")
     }
 
