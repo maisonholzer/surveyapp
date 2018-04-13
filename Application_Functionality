@@ -1,0 +1,73 @@
+Survey Application Operations:
+
+Notes:
+  Something encapsulated by ? ? it is still unknown/not defined yet.
+  Something encapsulated by ?? ?? is something determined by another group member.
+
+  Operation: User Login
+    1.	User inputs username & password then clicks ‘Login’ button.
+    2.	A request is sent to Controller
+    3.	Controller calls backend method that will one of two things:
+        o	Returns a User(Client) object
+        o	Returns Null in the case that the username is not valid.
+    4.	Controller will do one of two things:
+        o	Converts User to JSON and transmits data to Front End.
+        o	Convert Null to JSON and transmits data to Front End.
+    5.	Front End converts JSON to either User Object or Null then displays User information or “Incorrect Username” message.
+    6.	If Username & password is valid, Front End displays screen with User information(Available Surveys).
+
+    Questions:
+      1.	Where is the password verification done? –- Handled by Controller
+      2.	Do we want Administrators to be able to take surveys using their Admin accounts? -- No
+      3.	How will controller indicate to Front End if Username and/or password is incorrect?
+
+  Operation: Admin Login
+    1.	User inputs username & password then clicks ??Login button??.
+    2.	A request is sent to Controller.
+    3.	Controller calls backend method that will one of two things:
+      o	Returns a User(Admin) object
+      o	Returns Null in the case that the username is not valid.
+    4.	Controller will do one of two things:
+      o	Converts User to JSON and transmits data to Front End.
+      o	Convert Null to JSON and transmits data to Front End.
+    5.	Front End converts JSON to either User Object or Null then displays User information or “Incorrect Username” message.
+    6.	If Username & password is valid, Front End displays screen with Available Surveys for User & a way to filter the Surveys by cateogory(property of survey object).
+
+    Questions:
+      1.	Where is the password verification done? -- Controller
+      2.	Do we want Administrators to be able to take surveys using their Admin accounts?
+      3.	How will controller indicate to Front End if Username and/or password is incorrect?
+
+  Operation: New User Registration
+    1.	User clicks ??Register/New Account button??.
+    2.	Front End displays screen for registering a new user.
+    3.	User inputs a Username & Password, possibly more, then hits ??Submit button??.
+      a.	Luxury Option: Do a Username verification as the User inputs a new username to indicate if it is available.
+    4.	Request sent to Controller.
+    5.	Controller calls Back End method to add User(Client).
+    6.	Back End checks if Username is available, if so then creates new User(Client) then returns User(Client).
+    7.	Controller converts & transmits User to Front End.
+    8.	Front End displays default User screen with User(Client) features.
+
+    Questions:
+      1.	Should we have default Surveys that are available to all Users upon creation?
+      2.	Should we set restrictons on the password? Minimum length, contains at least 1 upper case and/or special characters. Possibly enforced by the Front End.
+
+  Operation: Adding an Admin
+    1.	Admin must login. See above operation
+    2.	Admin clicks ??New Admin button??.
+    3.	Admin inputs a Username & Password, possibly more, then hits ??Submit button??.
+      a.	Luxury Update: Do a Username verification as the User inputs a new username to indicate if it is available.
+    4.	Request sent to Controller.
+    5.	Controller calls Back End method to add User(Admin).
+    6.	Back End checks if Username is available, if so then creates new User(Admin) then returns User(Admin).
+    7.	Controller converts & transmits User to Front End.
+    8.	Front End displays default Admin screen with Admin features.
+
+  Operation: Client Taking Survey
+    1.	User logs in to account.
+    2.	User(Client) selects survey from ??drop down list?? and clicks a button to open selected survey.
+    3.	User fills out survey then clicks ??Submit button??.
+    4.	Front End creates a ?SurveyReport Object? then converts & transmits to Controller.
+    5.	Controller calls Back End method that will update the Results for that specific Survey.
+        Note: Each Survey will have a Overall Report attached to it to that will display the overall results of all users who have taken that survey.
