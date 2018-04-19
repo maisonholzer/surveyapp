@@ -1,4 +1,4 @@
-package edu.uiowa.cs
+package BackEnd
 
 import java.io.FileWriter
 import java.io.IOException
@@ -8,6 +8,7 @@ import java.nio.file.Paths
 
 val AdministratorList = mutableListOf<User>()
 val clientList = mutableListOf<Client>()
+val ClientList = mutableMapOf<String,Client>()
 
 private fun retrieveAdminList(){
     var fileReader: BufferedReader? = null
@@ -69,7 +70,8 @@ private fun retrieveClientList(){
         while (line != null) {
             val tokens = line.split(",")
             if (tokens.size > 0) {
-                val adUser = Client(tokens[username], tokens[password], false)
+                //val adUser = Client(tokens[username], tokens[password], false)
+                val adUser = Client(tokens[username], tokens[password])
             }
 
             line = fileReader.readLine()
@@ -174,7 +176,7 @@ fun RetrieveAdmin(adminID: String): User?{
         while (line != null){
             val tokens = line.split(",")
             if (tokens.size > 0 && tokens[username] == adminID){
-                Ad = Admin(tokens[username],tokens[password],false)
+                Ad = Admin(tokens[username], tokens[password], false)
             }
             line = fileReader.readLine()
         }
@@ -196,20 +198,20 @@ fun createAdmin(username: String, password: String){
     if (AdministratorList.isEmpty()) retrieveAdminList()
 
     if (userName_Available(username, AdministratorList)){
-        Admin(username,password,true)
+        Admin(username, password, true)
     }else println("Username is use.")
 
 }
-
+/*
 fun createClient(username: String, password: String){
     if (clientList.isEmpty()) retrieveClientList()
 
     if (userName_Available(username, clientList)){
-        Client(username,password,true)
+        Client(username, password, true)
     }else println("Username is use.")
 
 }
-
+*/
 private fun userName_Available(newUsername: String, userList: List<User>): Boolean{
     for (users in userList){
         if (users.username == newUsername) return false
@@ -222,7 +224,7 @@ private fun RetrieveClient(clientID: String){
 
 open class User(val username: String,val pass: String)
 
-class Admin: User{
+class Admin: User {
 
     constructor(username: String, pass: String, new: Boolean): super(username,pass){
         AdministratorList.add(this)
@@ -233,12 +235,13 @@ class Admin: User{
     }
 }
 
-class Client: User{
+class Client: User {
     var surveys = mutableListOf<survey>()
 
-    constructor(username: String, pass: String, new: Boolean): super(username,pass){
-        clientList.add(this)
-        if (new == true) updateClientFile()
+    constructor(username: String, pass: String): super(username,pass){
+        //  clientList.add(this)                    // Removed due to Interface handling the update of persistent storage.
+
+        // if (new == true) updateClientFile()      // Removed due to Interface handling the update of persistent storage.
     }
 }
 

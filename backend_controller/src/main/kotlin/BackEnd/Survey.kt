@@ -1,4 +1,4 @@
-package edu.uiowa.cs
+package BackEnd
 
 import java.io.BufferedReader
 import java.io.FileReader
@@ -104,7 +104,7 @@ private fun getQuestionList(){
                 for (t in 2 until tokens.size){
                     temp.add(tokens[t])
                 }
-                q = question(tokens[questionID],tokens[text],temp)
+                q = question(tokens[questionID], tokens[text], temp)
                 questionList.add(q)
             }
             line = fileReader.readLine()
@@ -144,7 +144,7 @@ private fun getSurveyList(){
                 for (t in 2 until tokens.size){
                     temp.add(getQuestion(tokens[t]) as question)
                 }
-                surv = survey(tokens[survID],tokens[title],temp)
+                surv = survey(tokens[survID], tokens[title], temp)
                 surveyList.add(surv)
             }
             line = fileReader.readLine()
@@ -184,7 +184,7 @@ fun getSurvey(sID:String): survey?{
                 for (t in 2 until tokens.size){
                     temp.add(getQuestion(tokens[t]) as question)
                 }
-                surv = survey(tokens[survID],tokens[title],temp)
+                surv = survey(tokens[survID], tokens[title], temp)
             }
             line = fileReader.readLine()
         }
@@ -224,7 +224,7 @@ fun getQuestion(qID:String): question?{
                 for (t in 2 until tokens.size){
                     temp.add(tokens[t])
                 }
-                q = question(tokens[questionID],tokens[text],temp)
+                q = question(tokens[questionID], tokens[text], temp)
             }
             line = fileReader.readLine()
         }
@@ -244,13 +244,13 @@ fun getQuestion(qID:String): question?{
 
 fun createSurvey(sID: String,title: String, questions: List<question>){
     if (questionList.isEmpty()) getQuestionList()
-    if (surveyList.isEmpty())getSurveyList()
-    surveyList.add(survey(sID,title,questions))
+    if (surveyList.isEmpty()) getSurveyList()
+    surveyList.add(survey(sID, title, questions))
     writeSurveyFile()
 }
 
 fun createQuestion(qID: String, text: String, answers: List<String>){
     if (questionList.isEmpty()) getQuestionList()
-    questionList.add(question(qID,text,answers))
+    questionList.add(question(qID, text, answers))
     writeQuestionFile()
 }
