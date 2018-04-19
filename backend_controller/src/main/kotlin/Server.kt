@@ -8,18 +8,17 @@ package edu.uiowa.cs
 // (these will be covered in class, so you can take notes then)
 
 /** Start collecting backend files and getting them to work within our combined app **/
+import BackEnd.User
 import javax.ws.rs.*
 import javax.ws.rs.core.MediaType.APPLICATION_JSON
 import javax.ws.rs.core.Application
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.KotlinModule
-import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
-import jdk.nashorn.internal.runtime.logging.Logger
-import org.glassfish.jersey.jackson.JacksonFeature
 import org.glassfish.jersey.netty.httpserver.NettyHttpContainerProvider
 import org.glassfish.jersey.server.ResourceConfig
 import java.net.URI
 import javax.ws.rs.ext.ContextResolver
+import BackEnd.BackEnd_API
 
 // The User class was put in a separate file (see User.kt)
 
@@ -31,7 +30,7 @@ import javax.ws.rs.ext.ContextResolver
 
 @Path("users")  // when this runs, try http://localhost:8080/users/Iowa for the "GET" request
 @Produces(APPLICATION_JSON)
-class UserResource {
+class UserResource: BackEnd_API {
     private val users = HashMap<String, User>()
 
     init {
@@ -58,7 +57,8 @@ class UserResource {
         // into a User object, named as parameter "user" here
         // (it's done using KotlinModule, set up below)
         users += user.username to user
-        createClient(user.username, user.pass)
+        //createClient(user.username, user.pass)
+        newClient(user.username, user.pass)
         println("Created: " + "$user")
     }
 
