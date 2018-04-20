@@ -11,7 +11,7 @@ class SurveyInfoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_survey_info)
 
-        val btnOpenActivity: Button = findViewById(R.id.button2)
+        val btnOpenActivity: Button = findViewById<Button>(R.id.button2)
         btnOpenActivity.setOnClickListener{
             val intent = Intent(this,UserInfoActivity :: class.java )
             startActivity(intent)
