@@ -1,5 +1,6 @@
 package cs.uiowa.edu.android_front_end
 
+import android.app.Activity
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -11,7 +12,7 @@ class Survey1Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_survey1)
 
-        val btnOpenActivity: Button = findViewById(R.id.button4)
+        val btnOpenActivity: Button = findViewById<Button>(R.id.button4)
         btnOpenActivity.setOnClickListener{
             val intent = Intent(this,Survey2Activity :: class.java )
             startActivity(intent)

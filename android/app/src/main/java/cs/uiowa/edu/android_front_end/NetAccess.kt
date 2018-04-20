@@ -1,5 +1,5 @@
 package cs.uiowa.edu.android_front_end
-
+/*
 import org.json.JSONObject
 import android.content.Context
 import android.util.Log
@@ -9,7 +9,7 @@ import com.android.volley.request.JsonObjectRequest
 import com.android.volley.toolbox.VolleyTickle
 import com.google.gson.*
 import com.google.gson.reflect.TypeToken
-import edu.uiowa.cs.Controller.AllSurveys
+import cs.uiowa.edu.Controller.AllSurveys
 
 
 
@@ -37,13 +37,13 @@ object NetAccess {
         // change this URL to have the IP address of the Controller machine
         // and make sure Controller is running edu.uiowa.cs.NettyServer
         // in another shell before trying this
-        val url = "http://97.127.165.220:8080/surveys/all"
+        val url = "http://192.168.0.2:8080/surveys/all"
         val t = jsonop(P,JSONObject(),url) // sending an empty JSON object
-        val default = AllSurveys(mapOf<Int,String>())
+        val default = AllSurveys(mapOf<Int, String>())
         if (t == null) return default
         val mapper = Gson() // use Gson to convert JSONObject to Allsurveys
         val conversionType = object : TypeToken<AllSurveys>(){ }.type
-        val converted:AllSurveys = mapper.fromJson(t.toString(),conversionType)
+        val converted: AllSurveys = mapper.fromJson(t.toString(),conversionType)
         return converted
     }
-}
+}*/
