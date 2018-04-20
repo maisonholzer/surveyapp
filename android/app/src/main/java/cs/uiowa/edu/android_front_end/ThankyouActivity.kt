@@ -16,5 +16,11 @@ class ThankyouActivity : AppCompatActivity() {
             val intent = Intent(this,SurveySelectActivity :: class.java )
             startActivity(intent)
         }
+
+        val btnHomeActivity: Button = findViewById<Button>(R.id.buttonHome)
+        btnHomeActivity.setOnClickListener{
+            val intent = Intent(this,UserInfoActivity :: class.java )
+            startActivity(intent)
+        }
     }
 }
