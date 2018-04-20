@@ -25,16 +25,15 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="51dp"
-        android:layout_marginBottom="252dp"
-        android:layout_marginEnd="175dp"
-        android:layout_marginLeft="175dp"
-        android:layout_marginRight="175dp"
-        android:layout_marginStart="175dp"
-        android:text="@string/button_next1"
+        android:layout_marginBottom="220dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
 
+        android:layout_marginStart="8dp"
+        android:text="@string/button_next1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
