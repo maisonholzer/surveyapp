@@ -11,9 +11,15 @@ class Survey2Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_survey2)
 
-        val btnOpenActivity: Button = findViewById<Button>(R.id.button5)
-        btnOpenActivity.setOnClickListener{
-            val intent = Intent(this,Survey3Activity :: class.java )
+        val btnHomeActivity: Button = findViewById<Button>(R.id.bSurvey2Home)
+        btnHomeActivity.setOnClickListener{
+            val intent = Intent(this,UserInfoActivity :: class.java )
+            startActivity(intent)
+        }
+
+        val btnNextActivity: Button = findViewById<Button>(R.id.bSurvey2Next)
+        btnNextActivity.setOnClickListener{
+            val intent = Intent(this,ThankyouActivity :: class.java )
             startActivity(intent)
         }
     }

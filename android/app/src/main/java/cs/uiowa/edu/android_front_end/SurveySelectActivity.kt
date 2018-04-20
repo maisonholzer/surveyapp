@@ -32,5 +32,11 @@ class SurveySelectActivity : AppCompatActivity() {
             val intent = Intent(this,Survey1Activity :: class.java )
             startActivity(intent)
         }
+
+        val bNextActivity: Button = findViewById<Button>(R.id.bSurveySelectHome)
+        bNextActivity.setOnClickListener{
+            val intent = Intent(this,UserInfoActivity :: class.java )
+            startActivity(intent)
+        }
     }
 }
