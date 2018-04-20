@@ -10,7 +10,6 @@ import tornadofx.*
 import app.Styles
 import app.Styles.Companion.login
 
-
 class login : View("Survey Login") {
     override val root = Form().addClass(login)
 
@@ -37,6 +36,11 @@ class login : View("Survey Login") {
             button("Log in") {
                 setOnAction {
                     login()
+                }
+            }
+            button("New User") {
+                setOnAction {
+                    //createUser call so that a new user can be created...
                 }
             }
         }

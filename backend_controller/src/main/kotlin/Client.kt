@@ -1,4 +1,4 @@
-package edu.uiowa.cs
+package BackEnd
 
 import javax.ws.rs.client.ClientBuilder
 import javax.ws.rs.client.Entity
@@ -45,7 +45,7 @@ class RestClient {
 
     }
 
-    fun authenticateLogin(user: User, inputUsername: String, inputPassword: String): Response? {
+    fun authenticateLogin(user: User, inputUsername: String, inputPassword: String) : Response?{
         if (inputUsername == user.username && inputPassword == user.pass) {
             println("Logging you in...")
             return client
@@ -56,9 +56,11 @@ class RestClient {
         }
         if (inputUsername != user.username) {
             println("Username not found")
+            return null
         }
         if (inputUsername != user.username && inputPassword != user.pass) {
             println("Password is incorrect")
+            return null
         }
         else {
             println("Error...")

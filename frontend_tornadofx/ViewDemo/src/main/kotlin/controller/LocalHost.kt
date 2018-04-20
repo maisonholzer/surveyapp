@@ -7,12 +7,10 @@ import models.User
 class localHost: Controller() {
     val api : Rest by inject()
 
-
-/*
     init {
-        api.baseURI = "http://localhost:8080/users/Iowa"
+        api.baseURI = "http://localhost:8080/users"
+    }
 
-*/
     //checks credentials of user object
     fun login(user: User): Boolean {
         api.setBasicAuth(user.usernameProperty.value, user.passwordProperty.value)

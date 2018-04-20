@@ -20,6 +20,7 @@ import java.net.URI
 import javax.ws.rs.ext.ContextResolver
 import BackEnd.BackEnd_API
 
+
 // The User class was put in a separate file (see User.kt)
 
 // In Java, this would be a separate file for the resource part, this
@@ -72,6 +73,15 @@ class UserResource: BackEnd_API {
     @DELETE @Path("{username}")
     fun deleteUser(@PathParam("username") username: String): User? {
         return users.remove(username)
+    }
+
+    @Path("surveys")
+    @Produces(APPLICATION_JSON)
+    class SurveyResource {
+        @POST @Path("allsurveys")
+        fun getSurveys(): BackEnd_API {
+
+        }
     }
 }
 
