@@ -6,19 +6,33 @@ import java.io.BufferedReader
 import java.io.FileReader
 import java.nio.file.Paths
 
-val AdministratorList = mutableListOf<User>()
-val clientList = mutableListOf<Client>()
 val ClientList = mutableMapOf<String,Client>()
+val AdminList: MutableMap<String,Admin> = readAdminFile()
 
-private fun retrieveAdminList(){
+open class User(val username: String,val pass: String)
+
+class Admin: User {
+
+    constructor(username: String, pass: String): super(username,pass)
+
+}
+
+class Client: User {
+    var surveys = mutableListOf<survey>()
+
+    constructor(username: String, pass: String): super(username,pass)
+
+}
+
+fun readAdminFile(): MutableMap<String,Admin>{
+    val tempList = mutableMapOf<String,Admin>()
     var fileReader: BufferedReader? = null
 
     val Admin_username = 0
     val Admin_password = 1
 
-    // Reads the AdminList and create a list for editing if it has not already been done.
+
     try {
-        //val admins = ArrayList<User>()
         var line: String?
 
         fileReader = BufferedReader(FileReader(Paths.get("").toAbsolutePath().toString()+"\\res\\AdminList.csv"))
@@ -29,9 +43,8 @@ private fun retrieveAdminList(){
         while (line != null) {
             val tokens = line.split(",")
             if (tokens.size > 0) {
-                val adUser = Admin(tokens[Admin_username], tokens[Admin_password], false)
-                //admins.add(adUser)
-                //AdministratorList.add(adUser)
+                val adUser = Admin(tokens[Admin_username], tokens[Admin_password])
+                tempList.put(adUser.username,adUser)
             }
 
             line = fileReader.readLine()
@@ -48,10 +61,11 @@ private fun retrieveAdminList(){
             println("Error closing fileReader.")
         }
     }
-
+    return tempList
 }
 
-private fun retrieveClientList(){
+fun readClientFile(): MutableMap<String,Client>{
+    val tempList = mutableMapOf<String,Client>()
     var fileReader: BufferedReader? = null
 
     val username = 0
@@ -70,8 +84,8 @@ private fun retrieveClientList(){
         while (line != null) {
             val tokens = line.split(",")
             if (tokens.size > 0) {
-                //val adUser = Client(tokens[username], tokens[password], false)
                 val adUser = Client(tokens[username], tokens[password])
+                tempList.put(adUser.username,adUser)
             }
 
             line = fileReader.readLine()
@@ -88,10 +102,10 @@ private fun retrieveClientList(){
             println("Error closing fileReader.")
         }
     }
-
+    return tempList
 }
 
-private fun updateAdminFile(){
+internal fun updateAdminFile(){
     val header = "username, password"
     var fileWriter: FileWriter? = null
 
@@ -100,10 +114,10 @@ private fun updateAdminFile(){
         fileWriter.append(header)
         fileWriter.append('\n')
 
-        for (a in AdministratorList){
-            fileWriter.append(a.username)
+        for (a in AdminList){
+            fileWriter.append(a.value.username)
             fileWriter.append(',')
-            fileWriter.append(a.pass)
+            fileWriter.append(a.value.pass)
             fileWriter.append('\n')
         }
 
@@ -121,7 +135,7 @@ private fun updateAdminFile(){
     }
 }
 
-private fun updateClientFile(){
+internal fun updateClientFile(){
     val header = "username, password, surveys"
     var fileWriter: FileWriter? = null
 
@@ -130,13 +144,13 @@ private fun updateClientFile(){
         fileWriter.append(header)
         fileWriter.append('\n')
 
-        for (a in clientList){
-            fileWriter.append(a.username)
+        for (a in ClientList){
+            fileWriter.append(a.value.username)
             fileWriter.append(',')
-            fileWriter.append(a.pass)
+            fileWriter.append(a.value.pass)
             fileWriter.append(',')
             var surveyString = ""
-            for (s in a.surveys){
+            for (s in a.value.surveys){
                 surveyString += s.sID
                 surveyString += ","
             }
@@ -176,7 +190,7 @@ fun RetrieveAdmin(adminID: String): User?{
         while (line != null){
             val tokens = line.split(",")
             if (tokens.size > 0 && tokens[username] == adminID){
-                Ad = Admin(tokens[username], tokens[password], false)
+                Ad = Admin(tokens[username], tokens[password])
             }
             line = fileReader.readLine()
         }
@@ -194,55 +208,11 @@ fun RetrieveAdmin(adminID: String): User?{
     return Ad
 }
 
-fun createAdmin(username: String, password: String){
-    if (AdministratorList.isEmpty()) retrieveAdminList()
-
-    if (userName_Available(username, AdministratorList)){
-        Admin(username, password, true)
-    }else println("Username is use.")
-
-}
-/*
-fun createClient(username: String, password: String){
-    if (clientList.isEmpty()) retrieveClientList()
-
-    if (userName_Available(username, clientList)){
-        Client(username, password, true)
-    }else println("Username is use.")
-
-}
-*/
 private fun userName_Available(newUsername: String, userList: List<User>): Boolean{
     for (users in userList){
         if (users.username == newUsername) return false
     }
     return true
-}
-private fun RetrieveClient(clientID: String){
-
-}
-
-open class User(val username: String,val pass: String)
-
-class Admin: User {
-
-    constructor(username: String, pass: String, new: Boolean): super(username,pass){
-        AdministratorList.add(this)
-        if (new == true){
-            updateAdminFile()
-
-        }
-    }
-}
-
-class Client: User {
-    var surveys = mutableListOf<survey>()
-
-    constructor(username: String, pass: String): super(username,pass){
-        //  clientList.add(this)                    // Removed due to Interface handling the update of persistent storage.
-
-        // if (new == true) updateClientFile()      // Removed due to Interface handling the update of persistent storage.
-    }
 }
 
 fun main(args: Array<String>) {
