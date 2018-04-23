@@ -87,11 +87,5 @@ object TestClient {
     @JvmStatic
     fun main(args: Array<String>) {
         val client = RestClient();  // the object for REST communication
-        val response0 = client.getJsonUser("Iowa"); println(response0)
-        val newuser = User("William", "123")
-        val response1 = client.createJsonUser(newuser); println("Create user response $response1")
-        val response4 = client.getJsonUser("Bob"); println(response4)
-        val response5 = client.getJsonUser("Alice"); println(response5)
-        val response6 = client.getJsonUser("Alice"); println("Fetch Alice response $response6")
     }
 }
