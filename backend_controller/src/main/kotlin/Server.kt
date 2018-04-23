@@ -19,6 +19,8 @@ import org.glassfish.jersey.server.ResourceConfig
 import java.net.URI
 import javax.ws.rs.ext.ContextResolver
 import BackEnd.BackEnd_API
+import BackEnd.ClientList
+import BackEnd.clientList
 
 
 // The User class was put in a separate file (see User.kt)
@@ -33,11 +35,13 @@ import BackEnd.BackEnd_API
 @Produces(APPLICATION_JSON)
 class UserResource: BackEnd_API {
     private val users = HashMap<String, User>()
-
     init {
         // sneaky: the "+=" turns into a call to the put method of
         // the HashMap, which can take a Pair(key,value) as argument
-        users += "Iowa" to User("Iowa", "secret")
+        //users += "Iowa" to User("Iowa", "secret")
+        for (u in ClientList) {
+            users += u.key to User(u.key, u.value)
+        }
     }
 
     @GET @Path("{username}")
