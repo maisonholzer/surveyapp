@@ -27,4 +27,13 @@ interface BackEnd_API {
     fun usernameAvailable(name:String): Boolean{
         return !ClientList.contains(name) && !AdminList.contains(name)
     }
+
+    fun getAllSurveys(): MutableMap<String,survey>{
+        return surveyList
+    }
+
+    fun getAllQuestions(): MutableMap<String,question>{
+        return questionList
+    }
+
 }
