@@ -9,7 +9,7 @@ import java.nio.file.Paths
 val questionList: MutableMap<String,question> = readQuestionFile()
 val surveyList: MutableMap<String, survey> = readSurveyFile()
 
-class survey(val sID: String,val title: String, val questions: List<question>)
+class survey(val sID: String,val title: String, val type:String, val questions: List<question>)
 
 class question(val qID: String, val text: String, val answers: List<String>)
 
@@ -59,6 +59,7 @@ fun readSurveyFile(): MutableMap<String,survey>{
     var fileReader: BufferedReader? = null
     val survID = 0
     val title = 1
+    val type = 2
     var surv: survey? = null
 
     try {
@@ -73,10 +74,10 @@ fun readSurveyFile(): MutableMap<String,survey>{
             val tokens = line.split(",")
             if (tokens.size > 0){
                 val temp = mutableListOf<question>()
-                for (t in 2 until tokens.size){
+                for (t in 3 until tokens.size){
                     temp.add(questionList.get(tokens[t]) as question)
                 }
-                surv = survey(tokens[survID], tokens[title], temp)
+                surv = survey(tokens[survID], tokens[title], tokens[type] ,temp)
                 tempList.put(surv.sID,surv)
             }
             line = fileReader.readLine()
@@ -108,7 +109,8 @@ private fun writeSurveyFile(){
             fileWriter.append(a.value.sID)
             fileWriter.append(',')
             fileWriter.append(a.value.title)
-            //fileWriter.append(',')
+            fileWriter.append(',')
+            fileWriter.append(a.value.type)
             for (q in a.value.questions){
                 fileWriter.append(',')
                 fileWriter.append(q.qID.toString())
@@ -162,4 +164,8 @@ private fun writeQuestionFile(){
             e.printStackTrace()
         }
     }
+}
+
+fun main(args: Array<String>) {
+    println(surveyList.get("s2")?.type)
 }

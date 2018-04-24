@@ -6,6 +6,7 @@ interface BackEnd_API {
 
     fun newClient(name:String,password:String):User{
         val x = Client(name,password)
+        x.surveys = getAllSurveys()
         ClientList.put(x.username,x)
         updateClientFile()
         return x
@@ -26,6 +27,19 @@ interface BackEnd_API {
 
     fun usernameAvailable(name:String): Boolean{
         return !ClientList.contains(name) && !AdminList.contains(name)
+    }
+
+    fun getAllUsersList(): HashMap<String, User>{
+        updateClientFile()
+        updateAdminFile()
+        val userList: HashMap<String, User> = HashMap()
+        for (client in ClientList){
+            userList.put(client.key, client as User)
+        }
+        for (admin in AdminList){
+            userList.put(admin.key, admin as User)
+        }
+        return userList
     }
 
     fun getAllSurveys(): MutableMap<String,survey>{
