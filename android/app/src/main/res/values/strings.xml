@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Crazy Team 2</string>
+    <string name="app_name">Team 2</string>
     <string name="title_activity_login">Sign in</string>
 
     <!-- Strings related to login -->
@@ -16,7 +16,6 @@
     </string>
     <string name="title_activity_scrolling">"UIOWA CS Survey "</string>
     <string name="large_text">
-        "Welcome to UIOWA CS Department !\n\n "
         "Thank you so much for your precious time ........\n\n"
         "This survey is about ......\n\n"
         "......more information about the survey\n\n......"
