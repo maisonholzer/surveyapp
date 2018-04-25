@@ -6,7 +6,7 @@ import java.io.BufferedReader
 import java.io.FileReader
 import java.nio.file.Paths
 
-val ClientList = mutableMapOf<String,Client>()
+val ClientList: MutableMap<String,Client> = readClientFile()
 val AdminList: MutableMap<String,Admin> = readAdminFile()
 
 open class User(val username: String,val pass: String)
@@ -18,7 +18,7 @@ class Admin: User {
 }
 
 class Client: User {
-    var surveys = mutableListOf<survey>()
+    var surveys = mutableMapOf<String,survey>()
 
     constructor(username: String, pass: String): super(username,pass)
 
@@ -151,7 +151,7 @@ internal fun updateClientFile(){
             fileWriter.append(',')
             var surveyString = ""
             for (s in a.value.surveys){
-                surveyString += s.sID
+                surveyString += s.value.sID
                 surveyString += ","
             }
             fileWriter.append(surveyString)

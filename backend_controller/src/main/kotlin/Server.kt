@@ -19,8 +19,7 @@ import org.glassfish.jersey.server.ResourceConfig
 import java.net.URI
 import javax.ws.rs.ext.ContextResolver
 import BackEnd.BackEnd_API
-import BackEnd.ClientList
-import BackEnd.clientList
+import BackEnd.*
 
 
 // The User class was put in a separate file (see User.kt)
@@ -39,9 +38,7 @@ class UserResource: BackEnd_API {
         // sneaky: the "+=" turns into a call to the put method of
         // the HashMap, which can take a Pair(key,value) as argument
         //users += "Iowa" to User("Iowa", "secret")
-        for (u in ClientList) {
-            users += u.key to User(u.key, u.value)
-        }
+        users += getAllUsersList()
     }
 
     @GET @Path("{username}")
@@ -83,8 +80,8 @@ class UserResource: BackEnd_API {
     @Produces(APPLICATION_JSON)
     class SurveyResource {
         @POST @Path("allsurveys")
-        fun getSurveys(): BackEnd_API {
-
+        fun getAllSurveys(): MutableMap<String, survey> {
+            return surveyList
         }
     }
 }
