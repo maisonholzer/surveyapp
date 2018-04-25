@@ -1,6 +1,6 @@
 package app
 
 import tornadofx.App
-import view.login
+import view.appTest
 
-class SurveyApp: App(login::class, Styles::class)
+class SurveyApp: App(appTest::class, Styles::class)
