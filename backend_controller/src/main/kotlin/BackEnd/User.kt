@@ -9,7 +9,16 @@ import java.nio.file.Paths
 val ClientList: MutableMap<String,Client> = readClientFile()
 val AdminList: MutableMap<String,Admin> = readAdminFile()
 
-open class User(val username: String,val pass: String)
+open class User {
+    val username: String
+    val pass: String
+    constructor(username: String, pass: String) {
+        this.username = username; this.pass = pass
+    }
+    constructor() {
+        this.username = ""; this.pass = ""
+    }
+}
 
 class Admin: User {
 

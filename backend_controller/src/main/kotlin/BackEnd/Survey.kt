@@ -9,9 +9,30 @@ import java.nio.file.Paths
 val questionList: MutableMap<String,question> = readQuestionFile()
 val surveyList: MutableMap<String, survey> = readSurveyFile()
 
-class survey(val sID: String,val title: String, val type:String, val questions: List<question>)
+class survey {
+    val sID: String
+    val title: String
+    val type:String
+    val questions: List<question>
+    constructor(sID: String, title: String, type: String, questions: List<question>) {
+        this.sID = sID; this.title = title; this.type = type; this.questions = questions
+    }
+    constructor() {
+        this.sID = ""; this.title = ""; this.type = ""; this.questions = emptyList()
+    }
+}
 
-class question(val qID: String, val text: String, val answers: List<String>)
+class question {
+    val qID: String
+    val text: String
+    val answers: List<String>
+    constructor(qID: String, text: String, answers: List<String>) {
+        this.qID = qID; this.text = text; this.answers = answers
+    }
+    constructor() {
+        this.qID = ""; this.text = ""; this.answers = emptyList()
+    }
+}
 
 fun readQuestionFile(): MutableMap<String,question>{
     val tempList = mutableMapOf<String,question>()

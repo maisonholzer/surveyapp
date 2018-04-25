@@ -68,12 +68,20 @@ class RestClient {
         }
     }
     
-    fun getSurvey(user: User): Response {
+    fun getSurvey(surv: survey): Response {
         return client
                 .target(REST_URI)
                 .path("{username}/survey")
                 .request(MediaType.APPLICATION_JSON)
-                .post(Entity.entity(user, MediaType.APPLICATION_JSON))
+                .post(Entity.entity(surv, MediaType.APPLICATION_JSON))
+    }
+
+    fun getQuestion(q: question): Response {
+        return client
+                .target(REST_URI)
+                .path("survey/question")
+                .request(MediaType.APPLICATION_JSON)
+                .post(Entity.entity(q, MediaType.APPLICATION_JSON))
     }
     // create login, authentication, and answering questions
     companion object {
