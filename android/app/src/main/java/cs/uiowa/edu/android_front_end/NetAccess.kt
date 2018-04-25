@@ -1,5 +1,5 @@
 package cs.uiowa.edu.android_front_end
-/*
+
 import org.json.JSONObject
 import android.content.Context
 import android.util.Log
@@ -9,8 +9,9 @@ import com.android.volley.request.JsonObjectRequest
 import com.android.volley.toolbox.VolleyTickle
 import com.google.gson.*
 import com.google.gson.reflect.TypeToken
-import cs.uiowa.edu.Controller.AllSurveys
-
+import cs.uiowa.edu.Backend.readSurveyFile
+import cs.uiowa.edu.Backend.survey
+import cs.uiowa.edu.Backend.surveyList
 
 
 object NetAccess {
@@ -33,17 +34,17 @@ object NetAccess {
         return null
     }
 
-    fun getAllSurveys(P: MainActivity): AllSurveys {
+    fun getAllSurveys(P: MainActivity): survey {
         // change this URL to have the IP address of the Controller machine
-        // and make sure Controller is running edu.uiowa.cs.NettyServer
+        // and make sure Controller is running cs.uiowa.edu.Controller.NettyServer
         // in another shell before trying this
         val url = "http://192.168.0.2:8080/surveys/all"
         val t = jsonop(P,JSONObject(),url) // sending an empty JSON object
-        val default = AllSurveys(mapOf<Int, String>())
-        if (t == null) return default
+        val default = readSurveyFile()
+        //if (t == null) return null//default
         val mapper = Gson() // use Gson to convert JSONObject to Allsurveys
-        val conversionType = object : TypeToken<AllSurveys>(){ }.type
-        val converted: AllSurveys = mapper.fromJson(t.toString(),conversionType)
+        val conversionType = object : TypeToken<survey>(){ }.type
+        val converted: survey = mapper.fromJson(t.toString(),conversionType)
         return converted
     }
-}*/
+}

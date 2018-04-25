@@ -9,9 +9,10 @@ import android.util.Log // see examples of Log below
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.RadioButton
 import android.widget.TextView
 
-//import cs.uiowa.edu.android_front_end.NetAccess.getAllSurveys
+import cs.uiowa.edu.android_front_end.NetAccess.getAllSurveys
 
 // Log.v(tag,msg) for Verbose Level
 // Log.d(tag,msg) for Debug Level
@@ -29,8 +30,8 @@ class MainActivity : AppCompatActivity() {
         StrictMode.setThreadPolicy(policy)
         setContentView(R.layout.activity_main)
         Log.d(tag,"*** onCreate ***")
-        /*
-        val radnames = listOf(R.id.radioButton1,R.id.radioButton2,R.id.radioButton3,R.id.radioButton4)
+
+        /*val radnames = listOf(R.id.radioButton1,R.id.radioButton2,R.id.radioButton3,R.id.radioButton4)
         val radarray = Array<RadioButton>(5) {it -> findViewById(radnames.get(it))}
         // initially make all radio buttons invisible
         val A = getAllSurveys(this)
