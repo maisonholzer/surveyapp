@@ -50,4 +50,15 @@ interface BackEnd_API {
         return questionList
     }
 
+    fun updateUser(upUser: User){
+        if (upUser is Client){
+            ClientList.put(upUser.username,upUser)
+            updateClientFile()
+        }else {
+            AdminList.put(upUser.username,upUser as Admin)
+            updateAdminFile()
+        }
+
+    }
+
 }
