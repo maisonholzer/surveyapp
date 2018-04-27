@@ -18,7 +18,6 @@ import org.glassfish.jersey.netty.httpserver.NettyHttpContainerProvider
 import org.glassfish.jersey.server.ResourceConfig
 import java.net.URI
 import javax.ws.rs.ext.ContextResolver
-import BackEnd.BackEnd_API
 import BackEnd.*
 
 
@@ -34,11 +33,13 @@ import BackEnd.*
 @Produces(APPLICATION_JSON)
 class UserResource: BackEnd_API {
     private val users = HashMap<String, User>()
+    private val surveys = HashMap<String, survey>()
     init {
         // sneaky: the "+=" turns into a call to the put method of
         // the HashMap, which can take a Pair(key,value) as argument
         //users += "Iowa" to User("Iowa", "secret")
         users += getAllUsersList()
+        //surveys += getAllSurveys()
     }
 
     @GET @Path("{username}")
@@ -75,15 +76,13 @@ class UserResource: BackEnd_API {
     fun deleteUser(@PathParam("username") username: String): User? {
         return users.remove(username)
     }
-
+/*
     @Path("surveys")
     @Produces(APPLICATION_JSON)
-    class SurveyResource {
-        @POST @Path("allsurveys")
-        fun getAllSurveys(): MutableMap<String, survey> {
-            return surveyList
-        }
+    fun getAllSurvey(): MutableMap<String, survey> {
+        return surveys
     }
+    */
 }
 
 // In Java, this would be a third file, for the Application
