@@ -1,11 +1,6 @@
 package cs.uiowa.edu.Backend
 
-//import javax.validation.constraints.Null
-import cs.uiowa.edu.Backend.survey
-import cs.uiowa.edu.Backend.questionList
-import cs.uiowa.edu.Backend.surveyList
-import cs.uiowa.edu.Backend.question
-import cs.uiowa.edu.Backend.User
+import javax.validation.constraints.Null
 
 interface BackEnd_API {
 
@@ -34,16 +29,28 @@ interface BackEnd_API {
         return !ClientList.contains(name) && !AdminList.contains(name)
     }
 
-    fun getAllUsersList(): HashMap<String, User>{
+    fun getAllClientList(): HashMap<String, MutableMap.MutableEntry<String, Client>> {
         updateClientFile()
+        val clientList: HashMap<String, MutableMap.MutableEntry<String, Client>> = HashMap()
+        for (client in ClientList) {
+            clientList.put(client.key, client)
+        }
+        return clientList
+    }
+
+    fun getAllAdminList(): HashMap<String, MutableMap.MutableEntry<String, Admin>> {
         updateAdminFile()
-        val userList: HashMap<String, User> = HashMap()
-        for (client in ClientList){
-            userList.put(client.key, client as User)
+        val adminList: HashMap<String, MutableMap.MutableEntry<String, Admin>> = HashMap()
+        for (admin in AdminList) {
+            adminList.put(admin.key, admin)
         }
-        for (admin in AdminList){
-            userList.put(admin.key, admin as User)
-        }
+        return adminList
+    }
+
+    fun getAllUsersList(): HashMap<String, Any>{
+        val userList: HashMap<String, Any> = HashMap()
+        userList += getAllClientList()
+        userList += getAllAdminList()
         return userList
     }
 
@@ -53,6 +60,17 @@ interface BackEnd_API {
 
     fun getAllQuestions(): MutableMap<String,question>{
         return questionList
+    }
+
+    fun updateUser(upUser: User){
+        if (upUser is Client){
+            ClientList.put(upUser.username,upUser)
+            updateClientFile()
+        }else {
+            AdminList.put(upUser.username,upUser as Admin)
+            updateAdminFile()
+        }
+
     }
 
 }

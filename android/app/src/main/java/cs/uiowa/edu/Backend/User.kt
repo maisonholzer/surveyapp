@@ -5,7 +5,6 @@ import java.io.IOException
 import java.io.BufferedReader
 import java.io.FileReader
 import java.nio.file.Paths
-import cs.uiowa.edu.Backend.survey
 
 val ClientList: MutableMap<String,Client> = readClientFile()
 val AdminList: MutableMap<String,Admin> = readAdminFile()
@@ -45,7 +44,10 @@ fun readAdminFile(): MutableMap<String,Admin>{
     try {
         var line: String?
 
-        fileReader = BufferedReader(FileReader(""))//Paths.get("").toAbsolutePath().toString()+"\\res\\AdminList.csv"))
+        // Determines which OS is being used since path structure is different between Windows and Mac.
+        if (System.getProperty("os.name").split(" ")[0] == "Windows") {
+            fileReader = BufferedReader(FileReader(Paths.get("").toAbsolutePath().toString() + "\\res\\AdminList.csv"))
+        }else fileReader = BufferedReader(FileReader(Paths.get("").toAbsolutePath().toString() + "/res/AdminList.csv"))
 
         fileReader.readLine()
 
@@ -86,7 +88,10 @@ fun readClientFile(): MutableMap<String,Client>{
     try {
         var line: String?
 
-        fileReader = BufferedReader(FileReader(""))//Paths.get("").toAbsolutePath().toString()+"\\res\\ClientList.csv"))
+        // Determines which OS is being used since path structure is different between Windows and Mac.
+        if (System.getProperty("os.name").split(" ")[0] == "Windows") {
+            fileReader = BufferedReader(FileReader(Paths.get("").toAbsolutePath().toString() + "\\res\\ClientList.csv"))
+        }else fileReader = BufferedReader(FileReader(Paths.get("").toAbsolutePath().toString() + "/res/ClientList.csv"))
 
         fileReader.readLine()
 
@@ -120,7 +125,11 @@ internal fun updateAdminFile(){
     var fileWriter: FileWriter? = null
 
     try {
-        fileWriter = FileWriter("")//Paths.get("").toAbsolutePath().toString()+"\\res\\AdminList.csv")
+        // Determines which OS is being used since path structure is different between Windows and Mac.
+        if (System.getProperty("os.name").split(" ")[0] == "Windows") {
+            fileWriter = FileWriter(Paths.get("").toAbsolutePath().toString() + "\\res\\AdminList.csv")
+        }else fileWriter = FileWriter(Paths.get("").toAbsolutePath().toString() + "/res/AdminList.csv")
+
         fileWriter.append(header)
         fileWriter.append('\n')
 
@@ -150,7 +159,11 @@ internal fun updateClientFile(){
     var fileWriter: FileWriter? = null
 
     try {
-        fileWriter = FileWriter("")//Paths.get("").toAbsolutePath().toString()+"\\res\\ClientList.csv")
+        // Determines which OS is being used since path structure is different between Windows and Mac.
+        if (System.getProperty("os.name").split(" ")[0] == "Windows") {
+            fileWriter = FileWriter(Paths.get("").toAbsolutePath().toString() + "\\res\\ClientList.csv")
+        }else fileWriter = FileWriter(Paths.get("").toAbsolutePath().toString() + "/res/ClientList.csv")
+
         fileWriter.append(header)
         fileWriter.append('\n')
 
@@ -181,21 +194,16 @@ internal fun updateClientFile(){
         }
     }
 }
-
+/*
 fun RetrieveAdmin(adminID: String): User?{
     var fileReader: BufferedReader? = null
     val username = 0
     val password = 1
     var Ad: User? = null
-
     try {
         var line: String?
-
-
-        fileReader = BufferedReader(FileReader(""))//Paths.get("").toAbsolutePath().toString()+"\\res\\AdminList.csv"))
-
+        fileReader = BufferedReader(FileReader(Paths.get("").toAbsolutePath().toString()+"\\res\\AdminList.csv"))
         fileReader.readLine()
-
         line = fileReader.readLine()
         while (line != null){
             val tokens = line.split(",")
@@ -217,7 +225,7 @@ fun RetrieveAdmin(adminID: String): User?{
     }
     return Ad
 }
-
+*/
 private fun userName_Available(newUsername: String, userList: List<User>): Boolean{
     for (users in userList){
         if (users.username == newUsername) return false
@@ -226,5 +234,5 @@ private fun userName_Available(newUsername: String, userList: List<User>): Boole
 }
 
 fun main(args: Array<String>) {
-
-}
+    println(AdminList.get("Trevor")?.pass)
+}}

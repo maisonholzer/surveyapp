@@ -9,6 +9,7 @@
 
 /** Start collecting backend files and getting them to work within our combined app **/
 
+import BackEnd.User
 import javax.ws.rs.*
 import javax.ws.rs.core.MediaType.APPLICATION_JSON
 import javax.ws.rs.core.Application
@@ -18,9 +19,8 @@ import org.glassfish.jersey.netty.httpserver.NettyHttpContainerProvider
 import org.glassfish.jersey.server.ResourceConfig
 import java.net.URI
 import javax.ws.rs.ext.ContextResolver
-import cs.uiowa.edu.Backend.BackEnd_API
-import cs.uiowa.edu.Backend.*
-import cs.uiowa.edu.Backend.User
+import BackEnd.*
+import BackEnd.BackEnd_API
 
 
 // The User class was put in a separate file (see User.kt)
@@ -33,18 +33,20 @@ import cs.uiowa.edu.Backend.User
 
 @Path("users")  // when this runs, try http://localhost:8080/users/Iowa for the "GET" request
 @Produces(APPLICATION_JSON)
-class UserResource: BackEnd_API {
-    private val users = HashMap<String, User>()
+class UserResource: BackEnd_API{
+    private val users = HashMap<String, Any>()
+    private val surveys = HashMap<String, survey>()
     init {
         // sneaky: the "+=" turns into a call to the put method of
         // the HashMap, which can take a Pair(key,value) as argument
         //users += "Iowa" to User("Iowa", "secret")
         users += getAllUsersList()
+        //surveys += getAllSurveys()
     }
 
     @GET @Path("{username}")
-            // Test in browser with http://localhost:8080/users/Iowa
-    fun getUser(@PathParam("username") username: String): User? {
+    // Test in browser with http://localhost:8080/users/Iowa
+    fun getUser(@PathParam("username") username: String): Any? {
         println("Get " + "$username")
         return users[username]
         // note the return type is User? which means it will either
@@ -60,7 +62,6 @@ class UserResource: BackEnd_API {
         // into a User object, named as parameter "user" here
         // (it's done using KotlinModule, set up below)
         users += user.username to user
-        //createClient(user.username, user.pass)
         newClient(user.username, user.pass)
         println("Created: " + "$user")
     }
@@ -70,21 +71,20 @@ class UserResource: BackEnd_API {
     fun updateUser(@PathParam("username") username: String, user: User) {
         users -= username
         users += user.username to user
+        updateUser(user)
     }
 
     @DELETE @Path("{username}")
-    fun deleteUser(@PathParam("username") username: String): User? {
+    fun deleteUser(@PathParam("username") username: String): Any? {
         return users.remove(username)
     }
-
+/*
     @Path("surveys")
     @Produces(APPLICATION_JSON)
-    class SurveyResource {
-        @POST @Path("allsurveys")
-        fun getAllSurveys(): MutableMap<String, survey> {
-            return surveyList
-        }
+    fun getAllSurvey(): MutableMap<String, survey> {
+        return surveys
     }
+    */
 }
 
 // In Java, this would be a third file, for the Application
@@ -112,6 +112,5 @@ object NettyServer {
         Runtime.getRuntime().addShutdownHook(Thread(Runnable { server.close() }))
     }
 }
-
 
 *///

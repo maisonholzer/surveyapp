@@ -44,7 +44,9 @@ fun readQuestionFile(): MutableMap<String,question>{
     try {
         var line: String?
 
-        fileReader = BufferedReader(FileReader(""))//Paths.get("").toAbsolutePath().toString()+"\\res\\QuestionList.csv"))
+        if (System.getProperty("os.name").split(" ")[0] == "Windows") {
+            fileReader = BufferedReader(FileReader(Paths.get("").toAbsolutePath().toString() + "\\res\\QuestionList.csv"))
+        }else fileReader = BufferedReader(FileReader(Paths.get("").toAbsolutePath().toString() + "/res/QuestionList.csv"))
 
         fileReader.readLine()
 
@@ -86,7 +88,10 @@ fun readSurveyFile(): MutableMap<String,survey>{
     try {
         var line: String?
 
-        fileReader = BufferedReader(FileReader(""))//Paths.get("").toAbsolutePath().toString()+"\\res\\SurveyList.csv"))
+        // Determines which OS is being used since path structure is different between Windows and Mac.
+        if (System.getProperty("os.name").split(" ")[0] == "Windows") {
+            fileReader = BufferedReader(FileReader(Paths.get("").toAbsolutePath().toString() + "\\res\\SurveyList.csv"))
+        }else fileReader = BufferedReader(FileReader(Paths.get("").toAbsolutePath().toString() + "/res/SurveyList.csv"))
 
         fileReader.readLine()
 
@@ -117,12 +122,16 @@ fun readSurveyFile(): MutableMap<String,survey>{
     return tempList
 }
 
-private fun writeSurveyFile(){
+internal fun writeSurveyFile(){
     val header = "Survey ID, Title, Questions"
     var fileWriter: FileWriter? = null
 
     try {
-        fileWriter = FileWriter("")//Paths.get("").toAbsolutePath().toString()+"\\res\\SurveyList.csv")
+        // Determines which OS is being used since path structure is different between Windows and Mac.
+        if (System.getProperty("os.name").split(" ")[0] == "Windows") {
+            fileWriter = FileWriter(Paths.get("").toAbsolutePath().toString() + "\\res\\SurveyList.csv")
+        }else fileWriter = FileWriter(Paths.get("").toAbsolutePath().toString() + "/res/SurveyList.csv")
+
         fileWriter.append(header)
         fileWriter.append('\n')
 
@@ -153,12 +162,16 @@ private fun writeSurveyFile(){
     }
 }
 
-private fun writeQuestionFile(){
+internal fun writeQuestionFile(){
     val header = "Question ID, Question Text, Answers"
     var fileWriter: FileWriter? = null
 
     try {
-        fileWriter = FileWriter("")//Paths.get("").toAbsolutePath().toString()+"\\res\\QuestionList.csv")
+        // Determines which OS is being used since path structure is different between Windows and Mac.
+        if (System.getProperty("os.name").split(" ")[0] == "Windows") {
+            fileWriter = FileWriter(Paths.get("").toAbsolutePath().toString() + "\\res\\QuestionList.csv")
+        }else fileWriter = FileWriter(Paths.get("").toAbsolutePath().toString() + "/res/QuestionList.csv")
+
         fileWriter.append(header)
         fileWriter.append('\n')
 
@@ -189,4 +202,7 @@ private fun writeQuestionFile(){
 
 fun main(args: Array<String>) {
     println(surveyList.get("s2")?.type)
+    println(System.getProperty("os.name").split(" "))
+    if (System.getProperty("os.name").split(" ")[0] == "Windows") println("True")
+
 }
