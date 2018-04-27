@@ -29,16 +29,28 @@ interface BackEnd_API {
         return !ClientList.contains(name) && !AdminList.contains(name)
     }
 
-    fun getAllUsersList(): HashMap<String, User>{
+    fun getAllClientList(): HashMap<String, MutableMap.MutableEntry<String, Client>> {
         updateClientFile()
+        val clientList: HashMap<String, MutableMap.MutableEntry<String, Client>> = HashMap()
+        for (client in ClientList) {
+            clientList.put(client.key, client)
+        }
+        return clientList
+    }
+
+    fun getAllAdminList(): HashMap<String, MutableMap.MutableEntry<String, Admin>> {
         updateAdminFile()
-        val userList: HashMap<String, User> = HashMap()
-        for (client in ClientList){
-            userList.put(client.key, client as User)
+        val adminList: HashMap<String, MutableMap.MutableEntry<String, Admin>> = HashMap()
+        for (admin in AdminList) {
+            adminList.put(admin.key, admin)
         }
-        for (admin in AdminList){
-            userList.put(admin.key, admin as User)
-        }
+        return adminList
+    }
+
+    fun getAllUsersList(): HashMap<String, Any>{
+        val userList: HashMap<String, Any> = HashMap()
+        userList += getAllClientList()
+        userList += getAllAdminList()
         return userList
     }
 
