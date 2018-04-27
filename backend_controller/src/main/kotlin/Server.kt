@@ -41,7 +41,6 @@ class UserResource: BackEnd_API{
         //users += "Iowa" to User("Iowa", "secret")
         users += getAllUsersList()
         //surveys += getAllSurveys()
-        users += "Iowa" to User("Iowa", "secret")
     }
 
     @GET @Path("{username}")
