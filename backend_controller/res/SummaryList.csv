@@ -1,0 +1,11 @@
+Survey ID, Question ID, Answers, # of times chosen
+s1,q1,yes,2
+s1,q1,no,0
+s1,q2,yes,0
+s1,q2,no,1
+s1,q2,maybe,1
+s2,q1,yes,0
+s2,q1,no,0
+s2,q3,yes,0
+s2,q3,no,0
+s2,q3,maybe,0
