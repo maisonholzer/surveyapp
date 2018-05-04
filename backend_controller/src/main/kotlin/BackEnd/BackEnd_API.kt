@@ -73,4 +73,19 @@ interface BackEnd_API {
 
     }
 
+    fun addSurveyQuestion(survey: survey , question :question){
+        survey.addSurveyQuestion(question)
+    }
+
+    fun removeSurveyQuestion(survey: survey , question: question){
+        survey.removeQuestion(question)
+    }
+
+    fun addQuestionAnswer(question:question, answer:String){
+        question.addAnswer(answer)
+    }
+
+    fun removeQuestionAnswer(question:question, answer:String){
+        question.removeAnswer(answer)
+    }
 }
