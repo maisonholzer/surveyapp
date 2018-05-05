@@ -1,17 +1,12 @@
 package cs.uiowa.edu.android_front_end
 
-import org.json.JSONObject
 import android.content.Context
 import android.util.Log
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.request.JsonObjectRequest
 import com.android.volley.toolbox.VolleyTickle
-import com.google.gson.*
-import com.google.gson.reflect.TypeToken
-import cs.uiowa.edu.Backend.readSurveyFile
-import cs.uiowa.edu.Backend.survey
-import cs.uiowa.edu.Backend.surveyList
+import org.json.JSONObject
 
 
 object NetAccess {
@@ -33,7 +28,7 @@ object NetAccess {
         }
         return null
     }
-
+/*
     fun getAllSurveys(P: MainActivity): survey {
         // change this URL to have the IP address of the Controller machine
         // and make sure Controller is running cs.uiowa.edu.Controller.NettyServer
@@ -46,5 +41,5 @@ object NetAccess {
         val conversionType = object : TypeToken<survey>(){ }.type
         val converted: survey = mapper.fromJson(t.toString(),conversionType)
         return converted
-    }
+    }*/
 }
