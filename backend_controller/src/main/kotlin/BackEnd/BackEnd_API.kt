@@ -74,29 +74,19 @@ interface BackEnd_API {
     }
 
     fun addQuestionToSurvey(survey: survey , question :question) {
-
-    }
-    fun addSurveyQuestion(survey: survey , question :question){
-        survey.addSurveyQuestion(question)
+        if (!survey.questions.contains(question)) survey.addSurveyQuestion(question)
     }
 
     fun removeQuestionFromSurvey(survey: survey , question: question){
-
-    }
-    fun removeSurveyQuestion(survey: survey , question: question){
-        survey.removeQuestion(question)
+        if (survey.questions.contains(question)) survey.removeQuestion(question)
     }
 
-    fun addAnswerToQuestion(question:question, answer:String){}
-    fun addQuestionAnswer(question:question, answer:String){
-        question.addAnswer(answer)
+    fun addAnswerToQuestion(question:question, answer:String){
+        if (!question.answers.contains(answer)) question.addAnswer(answer)
     }
 
     fun removeAnswerFromQuestion(question:question, answer:String){
-
-    }
-    fun removeQuestionAnswer(question:question, answer:String){
-        question.removeAnswer(answer)
+        if (question.answers.contains(answer)) question.removeAnswer(answer)
     }
 
     fun getResultsOfSurvey(sId: String):ResultSummary{
