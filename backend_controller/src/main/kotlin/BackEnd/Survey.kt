@@ -11,21 +11,16 @@ val questionList: MutableMap<String,question> = readQuestionFile()
 val surveyList: MutableMap<String, survey> = readSurveyFile()
 val summaryList: MutableMap<String,ResultSummary> = readSummaryFile()
 
-
 class survey {
     val sID: String
     val title: String
-    val type:String
     val questions: MutableList<question>
-    constructor(sID: String, title: String, type: String, questions: MutableList<question>) {
-        this.sID = sID; this.title = title; this.type = type; this.questions = questions
-
+    constructor(sID: String, title: String, questions: MutableList<question>) {
+        this.sID = sID; this.title = title; this.questions = questions
     }
-    constructor(sID:String, title: String, type:String) {
-        this.sID = sID; this.title = title; this.type = type; this.questions = mutableListOf()
-        ResultSummary(sID)
+    constructor() {
+        this.sID = ""; this.title = ""; this.questions = emptyList<question>() as MutableList<question>
     }
-
     fun addSurveyQuestion(q: question){
         if (!questions.contains(q)) questions.add(q)
     }
@@ -42,10 +37,9 @@ class question {
     constructor(qID: String, text: String, answers: MutableList<String>) {
         this.qID = qID; this.text = text; this.answers = answers
     }
-    constructor(qID: String, text:String) {
-        this.qID = ""; this.text = ""; this.answers = mutableListOf()
+    constructor() {
+        this.qID = ""; this.text = ""; this.answers = emptyList<question>() as MutableList<String>
     }
-
     fun addAnswer(answer: String){
         answers.add(answer)
     }
@@ -86,11 +80,10 @@ class ResultSummary {
             surveySummary.put(qID, tempMap)
         }else surveySummary[qID]!!.put(answer,value)
     }
-
     fun addQuestionToSummary(newQuestion: question) {
-            val tempMap = mutableMapOf<Any, Int>()
-            for (answer in newQuestion.answers) tempMap.put(answer, 0)
-            surveySummary.put(newQuestion.qID, tempMap)
+        val tempMap = mutableMapOf<Any, Int>()
+        for (answer in newQuestion.answers) tempMap.put(answer, 0)
+        surveySummary.put(newQuestion.qID, tempMap)
     }
 
     fun updateSummaryResults(results: SurveyResults){
@@ -111,8 +104,7 @@ class SurveyResults {
         this.surveyID = surveyID
     }
 }
-
-internal fun readQuestionFile(): MutableMap<String,question>{
+fun readQuestionFile(): MutableMap<String,question>{
     val tempList = mutableMapOf<String,question>()
     var fileReader: BufferedReader? = null
     val questionID = 0
@@ -155,12 +147,11 @@ internal fun readQuestionFile(): MutableMap<String,question>{
     return tempList
 }
 
-internal fun readSurveyFile(): MutableMap<String,survey>{
+fun readSurveyFile(): MutableMap<String,survey>{
     val tempList = mutableMapOf<String,survey>()
     var fileReader: BufferedReader? = null
     val survID = 0
     val title = 1
-    val type = 2
     var surv: survey? = null
 
     try {
@@ -181,7 +172,7 @@ internal fun readSurveyFile(): MutableMap<String,survey>{
                 for (t in 3 until tokens.size){
                     temp.add(questionList.get(tokens[t]) as question)
                 }
-                surv = survey(tokens[survID], tokens[title], tokens[type] ,temp)
+                surv = survey(tokens[survID], tokens[title], temp)
                 tempList.put(surv.sID,surv)
             }
             line = fileReader.readLine()
@@ -200,7 +191,7 @@ internal fun readSurveyFile(): MutableMap<String,survey>{
     return tempList
 }
 
-private fun readSummaryFile(): MutableMap<String,ResultSummary>{
+fun readSummaryFile(): MutableMap<String,ResultSummary>{
     val tempList = mutableMapOf<String,ResultSummary>()
     var fileReader: BufferedReader? = null
     val survID = 0
@@ -249,7 +240,7 @@ private fun readSummaryFile(): MutableMap<String,ResultSummary>{
     return tempList
 }
 
-private fun writeSurveyFile(){
+internal fun writeSurveyFile(){
     val header = "Survey ID, Title, Questions"
     var fileWriter: FileWriter? = null
 
@@ -262,34 +253,33 @@ private fun writeSurveyFile(){
         fileWriter.append(header)
         fileWriter.append('\n')
 
-        for (a in summaryList) {
-            for (summary in a.value.surveySummary) {
-                fileWriter.append(a.value.surveyID)
+        for (a in surveyList){
+            fileWriter.append(a.value.sID)
+            fileWriter.append(',')
+            fileWriter.append(a.value.title)
+            fileWriter.append(',')
+            for (q in a.value.questions){
                 fileWriter.append(',')
-                fileWriter.append(summary.key)
-                for (answer in summary.value) {
-                    fileWriter.append(',')
-                    fileWriter.append(answer.key.toString())
-                    fileWriter.append(',')
-                    fileWriter.append(answer.value.toString())
-                }
+                fileWriter.append(q.qID.toString())
             }
+            fileWriter.append('\n')
         }
+
     } catch (e:Exception){
-        println("Error occurred while writing Summary File")
+        println("Error occurred while writing Survey File")
         e.printStackTrace()
     } finally {
         try {
             fileWriter!!.flush()
             fileWriter.close()
         } catch (e: IOException){
-            println("Closing Error during Summary File Write")
+            println("Closing Error during Survey File Write")
             e.printStackTrace()
         }
     }
 }
 
-private fun writeQuestionFile(){
+internal fun writeQuestionFile(){
     val header = "Question ID, Question Text, Answers"
     var fileWriter: FileWriter? = null
 

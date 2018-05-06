@@ -1,14 +1,6 @@
 package edu.uiowa.cs
 
-/************** Demonstration of Gradle Project for JSON server **************/
-// adapted from https://craftsmen.nl/kotlin-create-rest-services-using-jersey-and-jackson/
-// which you should read at least to understand what all these things are:
-//   Gradle, HTTP, REST, Jersey + Netty, JAX-RS, Serializing, De-serializing,
-//   JSON, Jackson, IP address, Port number
-// (these will be covered in class, so you can take notes then)
-
 /** Start collecting backend files and getting them to work within our combined app **/
-import BackEnd.User
 import javax.ws.rs.*
 import javax.ws.rs.core.MediaType.APPLICATION_JSON
 import javax.ws.rs.core.Application
@@ -19,8 +11,6 @@ import org.glassfish.jersey.server.ResourceConfig
 import java.net.URI
 import javax.ws.rs.ext.ContextResolver
 import BackEnd.*
-import BackEnd.BackEnd_API
-
 
 // The User class was put in a separate file (see User.kt)
 
@@ -32,23 +22,22 @@ import BackEnd.BackEnd_API
 
 @Path("users")  // when this runs, try http://localhost:8080/users/Iowa for the "GET" request
 @Produces(APPLICATION_JSON)
-class UserResource: BackEnd_API{
+class UserResource: BackEnd_API, RestClient() {
     private val users = HashMap<String, Any>()
-    private val surveys = HashMap<String, survey>()
+    private val surveys = HashMap<String, Any>()
+    private val questions = HashMap<String, Any>()
+
     init {
-        // sneaky: the "+=" turns into a call to the put method of
-        // the HashMap, which can take a Pair(key,value) as argument
-        //users += "Iowa" to User("Iowa", "secret")
         users += getAllUsersList()
-        //surveys += getAllSurveys()
+        surveys += getAllSurveys()
+        questions += getAllQuestions()
     }
 
     @GET @Path("{username}")
-            // Test in browser with http://localhost:8080/users/Iowa
+    @Produces(APPLICATION_JSON)
     fun getUser(@PathParam("username") username: String): Any? {
-        println("Get " + "$username")
         return users[username]
-        // note the return type is User? which means it will either
+        // note the return type is Any? which means it will either
         // be null (no user found) or a User object -- but then
         // that user object is "serialized" into JSON, because the
         // annotation above says @Produces(APPLICATION_JSON)
@@ -56,34 +45,68 @@ class UserResource: BackEnd_API{
 
     @POST @Path("create")
     @Consumes(APPLICATION_JSON)
-    fun createUser(user: User) {
+    fun createClient(user: User) {
         // JAX-RS will take the body (in JSON) and convert
-        // into a User object, named as parameter "user" here
+        // into a Client object, named as parameter "user" here
         // (it's done using KotlinModule, set up below)
-        users += user.username to user
-        newClient(user.username, user.pass)
-        println("Created: " + "$user")
+        if (usernameAvailable(user.username)) {
+            newClient(user.username, user.pass)
+            println("Created: " + user.username)
+        }
+        else {
+            println("username ${user.username} taken")
+        }
     }
 
+    @POST @Path("login")
+    @Consumes(APPLICATION_JSON)
+    @Produces(APPLICATION_JSON)
+    fun authenticate(user: User): Any? {
+        println("received user")
+        println("authenticating and sending user")
+        if (ClientList.get(user.username)!!.username == user.username && ClientList.get(user.username)!!.pass == user.pass) {
+            println("user is client, sending back")
+            return user as Client
+        }
+        else if (AdminList.get(user.username)!!.username == user.username && ClientList.get(user.username)!!.pass == user.pass) {
+            println("user is admin, sending back")
+            return user as Admin
+        }
+        else {
+            println("no user found that matches")
+            return null
+        }
+    }
+    /*
     @PUT @Path("{username}")
     @Consumes(APPLICATION_JSON)
     fun updateUser(@PathParam("username") username: String, user: User) {
-        users -= username
-        users += user.username to user
         updateUser(user)
     }
-
-    @DELETE @Path("{username}")
-    fun deleteUser(@PathParam("username") username: String): Any? {
-        return users.remove(username)
-    }
-/*
-    @Path("surveys")
-    @Produces(APPLICATION_JSON)
-    fun getAllSurvey(): MutableMap<String, survey> {
-        return surveys
-    }
     */
+    @DELETE @Path("{username}")
+    fun deleteUser(@PathParam("username") username: String) {
+        //return users.remove(username)
+    }
+
+    @GET @Path("survey/{survey}")
+    @Produces(APPLICATION_JSON)
+    fun getSurveys(@PathParam("survey") sID: String): Any? {
+        return surveys[sID]
+    }
+
+    @GET @Path("question/{question}")
+    fun getQuestion(@PathParam("question") qID: String): Any? {
+        return questions[qID]
+    }
+
+    @POST @Path("answer")
+    @Consumes(APPLICATION_JSON)
+    fun getQuestionAnswer(stringToRead: Pair<String, String>) {
+        val qID: String = stringToRead.first
+        val answer: String = stringToRead.second
+        println("Question asked: $qID; answer: $answer")
+    }
 }
 
 // In Java, this would be a third file, for the Application

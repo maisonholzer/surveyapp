@@ -25,41 +25,53 @@ interface BackEnd_API {
         else return null
     }
 
-    fun usernameAvailable(name:String): Boolean{
+    fun usernameAvailable(name:String): Boolean {
         return !ClientList.contains(name) && !AdminList.contains(name)
     }
 
-    fun getAllClientList(): HashMap<String, MutableMap.MutableEntry<String, Client>> {
+    fun getAllClientList(): MutableList<MutableMap.MutableEntry<String, Client>> {
         updateClientFile()
-        val clientList: HashMap<String, MutableMap.MutableEntry<String, Client>> = HashMap()
+        val clientList: MutableList<MutableMap.MutableEntry<String, Client>> = mutableListOf()
         for (client in ClientList) {
-            clientList.put(client.key, client)
+            clientList.add(client)
         }
         return clientList
     }
 
-    fun getAllAdminList(): HashMap<String, MutableMap.MutableEntry<String, Admin>> {
+    fun getAllAdminList(): MutableList<MutableMap.MutableEntry<String, Admin>> {
         updateAdminFile()
-        val adminList: HashMap<String, MutableMap.MutableEntry<String, Admin>> = HashMap()
+        val adminList: MutableList<MutableMap.MutableEntry<String, Admin>> = mutableListOf()
         for (admin in AdminList) {
-            adminList.put(admin.key, admin)
+            adminList.add(admin)
         }
         return adminList
     }
 
-    fun getAllUsersList(): HashMap<String, Any>{
+    fun getAllUsersList(): HashMap<String, Any> {
         val userList: HashMap<String, Any> = HashMap()
-        userList += getAllClientList()
-        userList += getAllAdminList()
+        for (admin in getAllAdminList()) {
+            userList.put(admin.key, admin.value)
+        }
+        for (client in getAllClientList()) {
+            userList.put(client.key, client.value)
+        }
         return userList
     }
 
-    fun getAllSurveys(): MutableMap<String,survey>{
-        return surveyList
+    fun getAllSurveys(): HashMap<String, survey> {
+        val survList: HashMap<String, survey> = HashMap()
+        for (survey in surveyList) {
+            survList.put(survey.key, survey.value)
+        }
+        return survList
     }
 
-    fun getAllQuestions(): MutableMap<String,question>{
-        return questionList
+    fun getAllQuestions(): MutableMap<String, question>{
+        val qList: HashMap<String, question> = HashMap()
+        for (q in questionList) {
+            qList.put(q.key, q.value)
+        }
+        return qList
     }
 
     fun updateUser(upUser: User){

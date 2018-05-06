@@ -1,18 +1,16 @@
 package cs.uiowa.edu.android_front_end
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.StrictMode
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.CardView
-import android.util.Log // see examples of Log below
+import android.util.Log
 import android.view.View
-import android.widget.Button
 import android.widget.EditText
-import android.widget.RadioButton
 import android.widget.TextView
 
-import cs.uiowa.edu.android_front_end.NetAccess.getAllSurveys
+//import cs.uiowa.edu.android_front_end.NetAccess.getAllSurveys
 
 // Log.v(tag,msg) for Verbose Level
 // Log.d(tag,msg) for Debug Level
