@@ -4,29 +4,53 @@ import models.User
 import tornadofx.*
 import app.Styles.Companion.adminStyle
 import app.Styles.Companion.inStyle
+import com.fasterxml.jackson.databind.ObjectMapper
+import controller.appClient
+import controller.surveyList
+import javafx.scene.Node
+import javafx.scene.control.Button
 import javafx.scene.control.ToggleGroup
+import models.Admin
+import models.Client
+import models.survey
+import javax.ws.rs.client.ClientBuilder
+import javax.ws.rs.client.Entity
+import javax.ws.rs.core.MediaType
+import javax.ws.rs.core.Response
+
+var newSurveyList = surveyList
+var questionnumber: Int = 0
+var surveynumber: Int = 1
+//values for testing
+var name: String = "Survey Title"
+var qtitle: String = "Question Title"
+var a1: String = "Answer One"
+var a2: String = "Answer Two"
+var a3: String = "Answer Three"
 
 class clientView : View() {
+    val controller = clientView.appControl(this) // controller defined below
     override val root = Form().addClass(adminStyle)
 
-    //values for testing
-    var name: String = "Survey Question Here"
-    var a1: String = "Answer One"
-    var a2: String = "Answer Two"
-    var a3: String = "Answer Three"
-    var a4: String = "Answer Four"
-
     init {
-
+        //show first survey to start
+        appClient().getSurveys()
+        if (!newSurveyList.isEmpty()) {
+            var surveyToTake = newSurveyList.get("s"+surveynumber)
+            name = surveyToTake!!.title
+            qtitle = surveyToTake.questions[questionnumber].text
+            a1 = surveyToTake.questions[questionnumber].answers[0]
+            a2 = surveyToTake.questions[questionnumber].answers[1]
+            a3 = surveyToTake.questions[questionnumber].answers[2]
+        }
         with (root) {
             borderpane {
                 top = label("Client") {
-
                 }
                 bottom = vbox {
-                    button("back") {
+                    button("Log out") {
                         action {
-                            replaceWith(appTest::class)
+                            controller.buttonaction(this)
                         }
                     }
                 }
@@ -35,43 +59,88 @@ class clientView : View() {
 
 
                     label(name)
-
-                    val tg = ToggleGroup()
+                    label(qtitle)
 
                     vbox {
-                        radiobutton(a1, tg)
-                        radiobutton(a2, tg)
-                        radiobutton(a3, tg)
-                        radiobutton(a4, tg)
+                        button(a1) {
+                            setOnAction { println("button $a1 pressed"); sendQuestionData(qtitle, a1) }
+                        }
+                        button(a2) {
+                            setOnAction { println("button $a2 pressed"); sendQuestionData(qtitle, a2) }
+                        }
+                        button(a3) {
+                            setOnAction { println("button $a3 pressed"); sendQuestionData(qtitle, a3) }
+                        }
 
                     }
                     hbox {
-                        button("<-")
-                        button("->")
+                        button("Next Question") {
+                            action { controller.buttonaction(this) }
+                        }
                     }
-
-
-
                 }
                 left = vbox {
-                    button("New") {
-                        action {
-
-
-                        }
-                    }
-                    button("Next") {
-                        action {
-
-                        }
-                    }
-                    button("Log Out") {
-                        action {
-
-                        }
+                    button("Next Survey") {
+                        action { controller.buttonaction(this) }
                     }
                 }
             }
         }
     }
+
+    class appControl(val viewobject:View) : Controller() {
+        fun buttonaction(buttonObj: Node) {
+            val B = buttonObj as Button
+            val text = B.text
+            // now take specific action depending on button number
+            when {
+                (text == "Log out") -> {
+                    viewobject.replaceWith(find(appTest::class))
+                }
+                (text == "Next Survey") -> {
+                    try {
+                        surveynumber += 1
+                        questionnumber = 0
+                        var surveyToTake = newSurveyList.get("s"+surveynumber)
+                        name = surveyToTake!!.title
+                        qtitle = surveyToTake.questions[questionnumber].text
+                        a1 = surveyToTake.questions[questionnumber].answers[0]
+                        a2 = surveyToTake.questions[questionnumber].answers[1]
+                        a3 = surveyToTake.questions[questionnumber].answers[2]
+                    } catch (ex: Exception) {
+                        println("no more surveys")
+                        surveynumber -= 1
+                    }
+                }
+                (text == "Next Question") -> {
+                    try {
+                        questionnumber += 1
+                        var surveyToTake = newSurveyList.get("s"+surveynumber)
+                        name = surveyToTake!!.title
+                        qtitle = surveyToTake.questions[questionnumber].text
+                        a1 = surveyToTake.questions[questionnumber].answers[0]
+                        a2 = surveyToTake.questions[questionnumber].answers[1]
+                        a3 = surveyToTake.questions[questionnumber].answers[2]
+                        println(questionnumber)
+                    } catch (ex: Exception) {
+                        println("no more questions")
+                        questionnumber -= 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+fun sendQuestionData(qID: String, answer: String): Response {
+    val client = ClientBuilder.newClient()
+    val questionanswer = Pair(qID, answer)
+    val mapper = ObjectMapper()
+    val jsonString = mapper.writeValueAsString(questionanswer)
+    val resp = client
+            .target("http://localhost:8080/users")
+            .path("answer")
+            .request(MediaType.APPLICATION_JSON)
+            .post(Entity.entity(jsonString, MediaType.APPLICATION_JSON))
+    return resp
 }

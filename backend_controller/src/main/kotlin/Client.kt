@@ -1,5 +1,6 @@
-package BackEnd
+package edu.uiowa.cs
 
+import BackEnd.*
 import javax.ws.rs.client.ClientBuilder
 import javax.ws.rs.client.Entity
 import javax.ws.rs.core.MediaType
@@ -8,7 +9,6 @@ import javax.ws.rs.client.ClientRequestContext
 import javax.ws.rs.client.ClientRequestFilter
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.KotlinModule
-import java.net.PasswordAuthentication
 import javax.ws.rs.ext.ContextResolver
 
 class LoggingFilter: ClientRequestFilter {
@@ -17,7 +17,7 @@ class LoggingFilter: ClientRequestFilter {
     }
 }
 
-class RestClient {
+open class RestClient {
 
     private val client = ClientBuilder.newClient()
     init {
@@ -45,29 +45,31 @@ class RestClient {
 
     }
 
-    fun authenticateLogin(user: User, inputUsername: String, inputPassword: String) : Response?{
-        if (inputUsername == user.username && inputPassword == user.pass) {
-            println("Logging you in...")
-            return client
-                    .target(REST_URI)
-                    .path("{username}/login")
-                    .request(MediaType.APPLICATION_JSON)
-                    .post(Entity.entity(user, MediaType.APPLICATION_JSON))
-        }
-        if (inputUsername != user.username) {
-            println("Username not found")
-            return null
-        }
-        if (inputUsername != user.username && inputPassword != user.pass) {
-            println("Password is incorrect")
-            return null
-        }
-        else {
-            println("Error...")
-            return null
-        }
+    fun pushUserToView(user: User): Response {
+        return client
+                .target(REST_URI)
+                .path(user.username)
+                .request(MediaType.APPLICATION_JSON)
+                .post(Entity.entity(user, MediaType.APPLICATION_JSON))
     }
-    
+
+    fun pushClientToView(user: Client): Response {
+        println("pushing...")
+        return client
+                .target(REST_URI)
+                .path(user.username)
+                .request(MediaType.APPLICATION_JSON)
+                .post(Entity.entity(user, MediaType.APPLICATION_JSON))
+    }
+
+    fun pushAdminToView(user: Admin): Response {
+        return client
+                .target(REST_URI)
+                .path(user.username)
+                .request(MediaType.APPLICATION_JSON)
+                .post(Entity.entity(user, MediaType.APPLICATION_JSON))
+    }
+
     fun getSurvey(surv: survey): Response {
         return client
                 .target(REST_URI)
