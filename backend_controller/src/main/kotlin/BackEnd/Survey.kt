@@ -27,11 +27,11 @@ class survey {
     }
 
     fun addSurveyQuestion(q: question){
-        questions.add(q)
+        if (!questions.contains(q)) questions.add(q)
     }
 
     fun removeQuestion(q: question){
-        questions.remove(q)
+        if (questions.contains(q)) questions.remove(q)
     }
 }
 
@@ -87,7 +87,13 @@ class ResultSummary {
         }else surveySummary[qID]!!.put(answer,value)
     }
 
-    fun updateSummary(results: SurveyResults){
+    fun addQuestionToSummary(newQuestion: question) {
+            val tempMap = mutableMapOf<Any, Int>()
+            for (answer in newQuestion.answers) tempMap.put(answer, 0)
+            surveySummary.put(newQuestion.qID, tempMap)
+    }
+
+    fun updateSummaryResults(results: SurveyResults){
         val tempSummary = summaryList[results.surveyID]!!.surveySummary
         for (question in results.surveyResults){
             val oldVal:Int = tempSummary.get(question.key)?.getValue(question.value) as Int + 1
@@ -106,7 +112,7 @@ class SurveyResults {
     }
 }
 
-fun readQuestionFile(): MutableMap<String,question>{
+internal fun readQuestionFile(): MutableMap<String,question>{
     val tempList = mutableMapOf<String,question>()
     var fileReader: BufferedReader? = null
     val questionID = 0
@@ -149,7 +155,7 @@ fun readQuestionFile(): MutableMap<String,question>{
     return tempList
 }
 
-fun readSurveyFile(): MutableMap<String,survey>{
+internal fun readSurveyFile(): MutableMap<String,survey>{
     val tempList = mutableMapOf<String,survey>()
     var fileReader: BufferedReader? = null
     val survID = 0
@@ -194,7 +200,7 @@ fun readSurveyFile(): MutableMap<String,survey>{
     return tempList
 }
 
-fun readSummaryFile(): MutableMap<String,ResultSummary>{
+private fun readSummaryFile(): MutableMap<String,ResultSummary>{
     val tempList = mutableMapOf<String,ResultSummary>()
     var fileReader: BufferedReader? = null
     val survID = 0
@@ -243,7 +249,7 @@ fun readSummaryFile(): MutableMap<String,ResultSummary>{
     return tempList
 }
 
-internal fun writeSurveyFile(){
+private fun writeSurveyFile(){
     val header = "Survey ID, Title, Questions"
     var fileWriter: FileWriter? = null
 
@@ -283,7 +289,7 @@ internal fun writeSurveyFile(){
     }
 }
 
-internal fun writeQuestionFile(){
+private fun writeQuestionFile(){
     val header = "Question ID, Question Text, Answers"
     var fileWriter: FileWriter? = null
 
@@ -321,7 +327,7 @@ internal fun writeQuestionFile(){
     }
 }
 
-internal fun writeSummaryFile(){
+private fun writeSummaryFile(){
     val header = "Survey ID, Question ID, Answers, # of times chosen"
     var fileWriter: FileWriter? = null
 
