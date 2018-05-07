@@ -52,6 +52,7 @@ class UserResource: BackEnd_API, RestClient() {
         if (usernameAvailable(user.username)) {
             newClient(user.username, user.pass)
             println("Created: " + user.username)
+            users.put(user.username, Client(user.username, user.pass))
         }
         else {
             println("username ${user.username} taken")
