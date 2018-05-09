@@ -63,10 +63,10 @@ class appTest : View() {
             // now take specific action depending on button number
             when {
                 (text == "New User") -> {
-                    createClient(name, pass)
+                    appClient().createClient(name, pass)
                 }
                 (text == "Login") -> {
-                    authenticateLogin(name, pass)
+                    appClient().authenticateLogin(name, pass)
                     println("checking")
                     val user = appClient().getJsonUserForLogin(name)
                     println("checked")
@@ -89,32 +89,6 @@ class appTest : View() {
             }
         }
     }
-}
-
-fun createClient(n:String,p: String): Response {
-    val client = ClientBuilder.newClient()
-    val newUser = User(n,p)
-    val mapper = ObjectMapper()
-    val jsonString = mapper.writeValueAsString(newUser)
-    val resp = client
-            .target("http://localhost:8080/users")
-            .path("create")
-            .request(MediaType.APPLICATION_JSON)
-            .post(Entity.entity(jsonString, MediaType.APPLICATION_JSON))
-    return resp
-}
-
-fun authenticateLogin(n: String, p: String): Response {
-    val client = ClientBuilder.newClient()
-    val newUser = User(n,p)
-    val mapper = ObjectMapper()
-    val jsonString = mapper.writeValueAsString(newUser)
-    val resp = client
-            .target("http://localhost:8080/users")
-            .path("login")
-            .request(MediaType.APPLICATION_JSON)
-            .post(Entity.entity(jsonString, MediaType.APPLICATION_JSON))
-    return resp
 }
 
 fun storeClientSurveyData(user: Client) {

@@ -63,13 +63,13 @@ class clientView : View() {
 
                     vbox {
                         button(a1) {
-                            setOnAction { println("button $a1 pressed"); sendQuestionData(qtitle, a1) }
+                            setOnAction { println("button $a1 pressed"); appClient().sendQuestionData(qtitle, a1) }
                         }
                         button(a2) {
-                            setOnAction { println("button $a2 pressed"); sendQuestionData(qtitle, a2) }
+                            setOnAction { println("button $a2 pressed"); appClient().sendQuestionData(qtitle, a2) }
                         }
                         button(a3) {
-                            setOnAction { println("button $a3 pressed"); sendQuestionData(qtitle, a3) }
+                            setOnAction { println("button $a3 pressed"); appClient().sendQuestionData(qtitle, a3) }
                         }
 
                     }
@@ -130,17 +130,4 @@ class clientView : View() {
             }
         }
     }
-}
-
-fun sendQuestionData(qID: String, answer: String): Response {
-    val client = ClientBuilder.newClient()
-    val questionanswer = Pair(qID, answer)
-    val mapper = ObjectMapper()
-    val jsonString = mapper.writeValueAsString(questionanswer)
-    val resp = client
-            .target("http://localhost:8080/users")
-            .path("answer")
-            .request(MediaType.APPLICATION_JSON)
-            .post(Entity.entity(jsonString, MediaType.APPLICATION_JSON))
-    return resp
 }

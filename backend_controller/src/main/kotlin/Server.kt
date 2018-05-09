@@ -22,7 +22,7 @@ import BackEnd.*
 
 @Path("users")  // when this runs, try http://localhost:8080/users/Iowa for the "GET" request
 @Produces(APPLICATION_JSON)
-class UserResource: BackEnd_API, RestClient() {
+class UserResource: BackEnd_API {
     private val users = HashMap<String, Any>()
     private val surveys = HashMap<String, Any>()
     private val questions = HashMap<String, Any>()
@@ -78,11 +78,18 @@ class UserResource: BackEnd_API, RestClient() {
             return null
         }
     }
+
+    /*** For some reason, my updateUser function is throwing an error.
+     *   However, we don't need it, so it will be left out.       ***/
     /*
     @PUT @Path("{username}")
     @Consumes(APPLICATION_JSON)
-    fun updateUser(@PathParam("username") username: String, user: User) {
-        updateUser(user)
+    fun updateUser(@PathParam("username") username: String, user: Any) {
+        when (user) {
+            is Admin -> updateUser(user as Admin)
+            is Client -> updateUser(user as Client)
+            else -> println("No user found to update...")
+        }
     }
     */
     @DELETE @Path("{username}")
@@ -107,6 +114,48 @@ class UserResource: BackEnd_API, RestClient() {
         val qID: String = stringToRead.first
         val answer: String = stringToRead.second
         println("Question asked: $qID; answer: $answer")
+        // backend call
+    }
+
+    @POST @Path("numbers")
+    @Produces(APPLICATION_JSON)
+    fun sendNumberData(numberList: MutableList<Int>): List<Int> {
+        numberList.add(getAllAdminList().size)
+        numberList.add(getAllClientList().size)
+        numberList.add(surveys.size)
+        return numberList
+    }
+
+    @POST @Path("newquestion")
+    @Consumes(APPLICATION_JSON)
+    fun getNewQuestion(stringToRead: Pair<BackEnd.survey, BackEnd.question>) {
+        val surv: BackEnd.survey = stringToRead.first
+        val q: BackEnd.question = stringToRead.second
+        addQuestionToSurvey(surv, q)
+    }
+
+    @POST @Path("deletequestion")
+    @Consumes(APPLICATION_JSON)
+    fun deleteQuestion(stringToRead: Pair<BackEnd.survey, BackEnd.question>) {
+        val surv: BackEnd.survey = stringToRead.first
+        val q: BackEnd.question = stringToRead.second
+        removeQuestionFromSurvey(surv, q)
+    }
+
+    @POST @Path("addanswer")
+    @Consumes(APPLICATION_JSON)
+    fun getNewAnswer(stringToRead: Pair<BackEnd.question, String>) {
+        val q: BackEnd.question = stringToRead.first
+        val answer: String = stringToRead.second
+        addAnswerToQuestion(q, answer)
+    }
+
+    @POST @Path("deleteanswer")
+    @Consumes(APPLICATION_JSON)
+    fun deleteAnswer(stringToRead: Pair<BackEnd.question, String>) {
+        val q: BackEnd.question = stringToRead.first
+        val answer: String = stringToRead.second
+        removeAnswerFromQuestion(q, answer)
     }
 }
 

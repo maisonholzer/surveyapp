@@ -8,6 +8,7 @@ import app.Styles.Companion.adminStyle
 import app.Styles.Companion.inStyle
 import app.Styles.Companion.sideStyle
 import app.Styles.Companion.botStyle
+import controller.appClient
 import javafx.geometry.Pos
 import javafx.scene.layout.VBox
 import models.User
