@@ -1,16 +1,15 @@
 package cs.uiowa.edu.android_front_end
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
-import com.android.volley.Response
 import kotlinx.android.synthetic.main.activity_sign_up.*
-import org.json.JSONObject
-import java.time.Year
 
 class SignUpActivity : AppCompatActivity() {
+    val tag = "SignUpPage"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +36,7 @@ class SignUpActivity : AppCompatActivity() {
             */
             bSignUpActivity.setOnClickListener{
                 val intent = Intent(this,MainActivity :: class.java )
+                Log.i(tag," Sign Up Success! Go back to main page to log in")
                 startActivity(intent)
             }
         }
@@ -44,6 +44,7 @@ class SignUpActivity : AppCompatActivity() {
         val bSignUpNextActivity: Button = findViewById<Button>(R.id.buttonSignUpNext)
         bSignUpNextActivity.setOnClickListener{
             val intent = Intent(this,UserInfoActivity :: class.java )
+
             startActivity(intent)
         }
 
