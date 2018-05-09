@@ -53,7 +53,7 @@ object NetAccess {
         return t["pass"]as String
 
     }*/
-    fun getUser(P: MainActivity,name:String): Any? {
+    fun getUser(P: MainActivity,name:String,pass:String): Any? {
         // change this URL to have the IP address of your machine
         // and make sure netdemo is running edu.uiowa.cs.NettyServer
         // in another shell before trying this
@@ -65,17 +65,22 @@ object NetAccess {
         }//(name+" is not an registered user")}
         if (t?.length() == 3){
             Log.v("NetAccess:","this is a Client")
-            val mapper = Gson()
-            val conversionType = object : TypeToken<Client>() {}.type
-            val gotperson: Client = mapper.fromJson(t.toString(), conversionType)
-            //val gotperson = Admin(t["username"] as String,
-            // t["pass"] as String)
-            Log.v("NetAccess:", "username is " + gotperson.username)
-            Log.v("NetAccess:", "password is " + gotperson.pass)
-            //if (gotperson is Admin){Log.v("netAccess","this user is Admin")}
-            //if (gotperson !is Client){Log.v("netAccess","this user is Admin")}
-            Log.v("NetAccess:", "survey is " + gotperson.surveys)
-            return gotperson//t["pass"]as String
+            if (t["pass"].toString() == pass ) {
+                val mapper = Gson()
+                val conversionType = object : TypeToken<Client>() {}.type
+                val gotperson: Client = mapper.fromJson(t.toString(), conversionType)
+                //val gotperson = Admin(t["username"] as String,
+                // t["pass"] as String)
+                Log.v("NetAccess:", "username is " + gotperson.username)
+                Log.v("NetAccess:", "password is " + gotperson.pass)
+                //if (gotperson is Admin){Log.v("netAccess","this user is Admin")}
+                //if (gotperson !is Client){Log.v("netAccess","this user is Admin")}
+                Log.v("NetAccess:", "survey is " + gotperson.surveys)
+                return gotperson//t["pass"]as String
+            }else{
+                Log.v("NetAccess:","password is not correct")
+                return false
+            }
 
         }
         else {
