@@ -36,7 +36,7 @@ class SignUpActivity : AppCompatActivity() {
             */
             bSignUpActivity.setOnClickListener{
                 val intent = Intent(this,MainActivity :: class.java )
-                Log.i(tag," Sign Up Success! Go back to main page to log in")
+                Log.v(tag," Sign Up Success! Go back to main page to log in")
                 startActivity(intent)
             }
         }
