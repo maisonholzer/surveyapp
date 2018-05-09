@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
             radarray[ind].setVisibility(View.VISIBLE)
         }*/
 
-        val editTextUsername: EditText = findViewById<EditText>(R.id.etUsername2)
+        val editTextUsername: EditText = findViewById<EditText>(R.id.etUsername)
         var editTextPassword: EditText = findViewById<EditText>(R.id.etPassword)
         var login : CardView = findViewById(R.id.cardViewLogin)
 
