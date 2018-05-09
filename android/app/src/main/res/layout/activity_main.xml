@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/etUsername"
+        android:id="@+id/etUsername2"
         android:layout_width="200dp"
         android:layout_height="43dp"
         android:layout_alignParentBottom="true"

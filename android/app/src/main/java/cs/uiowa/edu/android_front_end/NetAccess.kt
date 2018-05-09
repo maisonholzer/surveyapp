@@ -85,66 +85,25 @@ object NetAccess {
         }
         else {
             Log.v("NetAccess:", "this is a Admin")
-            val mapper = Gson()
-            val conversionType = object : TypeToken<Admin>() {}.type
-            val gotperson: Admin = mapper.fromJson(t.toString(), conversionType)
-            //val gotperson = Admin(t["username"] as String,
-            // t["pass"] as String)
-            Log.v("NetAccess:", "username is " + gotperson.username)
-            Log.v("NetAccess:", "password is " + gotperson.pass)
-            //if (gotperson is Admin){Log.v("netAccess","this user is Admin")}
-            //if (gotperson !is Client){Log.v("netAccess","this user is Admin")}
-            //Log.v("NetAccess:", "survey is " + gotperson.surveys)
-            return gotperson//t["pass"]as String
+            if(t["pass"].toString() == pass) {
+                val mapper = Gson()
+                val conversionType = object : TypeToken<Admin>() {}.type
+                val gotperson: Admin = mapper.fromJson(t.toString(), conversionType)
+                //val gotperson = Admin(t["username"] as String,
+                // t["pass"] as String)
+                Log.v("NetAccess:", "username is " + gotperson.username)
+                Log.v("NetAccess:", "password is " + gotperson.pass)
+                //if (gotperson is Admin){Log.v("netAccess","this user is Admin")}
+                //if (gotperson !is Client){Log.v("netAccess","this user is Admin")}
+                //Log.v("NetAccess:", "survey is " + gotperson.surveys)
+                return gotperson//t["pass"]as String
+            }
+            else{
+                Log.v("NetAccess:","password is not correct")
+                return false
+            }
         }
-        /*
-        try {
 
-            val url = "http://192.168.0.2:8080/users/" + name
-            val t = jsonop(P, JSONObject(), url)  // sending an empty JSON object
-            //val default = Admin()
-            if (t == null) {
-                return null
-            }//(name+" is not an registered user")}
-            val mapper = Gson()
-            val conversionType = object : TypeToken<Admin>() {}.type
-            val gotperson: Admin = mapper.fromJson(t.toString(), conversionType)
-            //val gotperson = Admin(t["username"] as String,
-            // t["pass"] as String)
-            Log.v("NetAccess:", "username is " + gotperson.username)
-            Log.v("NetAccess:", "password is " + gotperson.pass)
-            //if (gotperson is Admin){Log.v("netAccess","this user is Admin")}
-            //if (gotperson !is Client){Log.v("netAccess","this user is Admin")}
-
-            //Log.v("NetAccess:", "survey is " + gotperson.surveys)
-            return gotperson//t["pass"]as String
-        }catch (ex: Exception) {
-            Log.v("NetAccess","user not an admin")
-        }
-        try {
-
-            val url = "http://192.168.0.2:8080/users/" + name
-            val t = jsonop(P, JSONObject(), url)  // sending an empty JSON object
-            //val default = Admin()
-            if (t == null) {
-                return null
-            }//(name+" is not an registered user")}
-            val mapper = Gson()
-            val conversionType = object : TypeToken<Client>() {}.type
-            val gotperson: Client = mapper.fromJson(t.toString(), conversionType)
-            //val gotperson = Admin(t["username"] as String,
-            // t["pass"] as String)
-            Log.v("NetAccess:", "username is " + gotperson.username)
-            Log.v("NetAccess:", "password is " + gotperson.pass)
-            //if (gotperson is Admin){Log.v("netAccess","this user is Admin")}
-            //if (gotperson !is Client){Log.v("netAccess","this user is Admin")}
-
-            Log.v("NetAccess:", "survey is " + gotperson.surveys)
-            return gotperson//t["pass"]as String
-        }catch (ex: Exception) {
-            Log.v("NetAccess","user not an Client")
-        }
-        return null */
 
     }
     /*

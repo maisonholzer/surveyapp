@@ -9,6 +9,8 @@ import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import controller.Admin
+import controller.Client
 import cs.uiowa.edu.android_front_end.NetAccess.getUser
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -41,7 +43,7 @@ class MainActivity : AppCompatActivity() {
             radarray[ind].setVisibility(View.VISIBLE)
         }*/
 
-        val editTextUsername: EditText = findViewById<EditText>(R.id.etUsername)
+        val editTextUsername: EditText = findViewById<EditText>(R.id.etUsername2)
         var editTextPassword: EditText = findViewById<EditText>(R.id.etPassword)
         var login : CardView = findViewById(R.id.cardViewLogin)
 
@@ -61,11 +63,18 @@ class MainActivity : AppCompatActivity() {
             else if(A == false){
                 NoUser.text = "username exists, but password is not correct"
             }
-            else{
+            else {
                 NoUser.text = " Log In Success "
-                Log.v("MainActivity","Log in success")
-                val intent = Intent(this,UserInfoActivity :: class.java )
-                startActivity(intent)}
+                Log.v("MainActivity", "Log in success")
+                if (A is Client) {
+                    val intent = Intent(this, UserInfoActivity::class.java)
+                    startActivity(intent)
+                }
+                if (A is Admin){
+                    val intent = Intent(this, AdminActivity::class.java)
+                    startActivity(intent)
+                }
+            }
 
 
 

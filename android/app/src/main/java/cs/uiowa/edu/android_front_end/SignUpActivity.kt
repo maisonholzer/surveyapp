@@ -17,13 +17,13 @@ class SignUpActivity : AppCompatActivity() {
 
         val editTextYear:EditText = findViewById<EditText>(R.id.etYear)
         val editTextName:EditText = findViewById<EditText>(R.id.etName)
-        val editTextUsername:EditText = findViewById<EditText>(R.id.etUsername)
+        val editTextUsername:EditText = findViewById<EditText>(R.id.etUsername2)
         val editTextPassword:EditText = findViewById<EditText>(R.id.etPassword)
 
         val bSignUpActivity: Button = findViewById<Button>(R.id.bSignUp)
         bSignUpActivity.setOnClickListener{
             val Name:String = etName.text.toString()
-            val Username:String = etUsername.text.toString()
+            val Username:String = etUsername2.text.toString()
             val Password:String = etPassword.text.toString()
             val Year:String = etYear.text.toString()
             /*
