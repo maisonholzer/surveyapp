@@ -9,6 +9,8 @@ import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import cs.uiowa.edu.android_front_end.NetAccess.getUser
+import kotlinx.android.synthetic.main.activity_main.*
 
 //import cs.uiowa.edu.android_front_end.NetAccess.getAllSurveys
 
@@ -40,12 +42,33 @@ class MainActivity : AppCompatActivity() {
         }*/
 
         val editTextUsername: EditText = findViewById<EditText>(R.id.etUsername)
-        val editTextPassword: EditText = findViewById<EditText>(R.id.etPassword)
+        var editTextPassword: EditText = findViewById<EditText>(R.id.etPassword)
+        var login : CardView = findViewById(R.id.cardViewLogin)
 
         val LoginActivity: CardView = findViewById<CardView>(R.id.cardViewLogin)
         LoginActivity.setOnClickListener{
-            val intent = Intent(this,UserInfoActivity :: class.java )
-            startActivity(intent)
+            Log.v("MainActivity", "Typed username "+ editTextUsername.text.toString())
+            var pass = true
+            val A = getUser(this,editTextUsername.text.toString())
+
+            //Log.v("MainActivity:", "User is")
+            if (A == null){//(editTextUsername.text.toString() + " is not an registered user")){
+                //pass = false
+                //login.isEnabled = false
+                NoUser.text = editTextUsername.text.toString() + " is not an registered user"//A.toString()
+                Log.v("MainActivity","Log in fail, can't find this name in both admin and user")
+            }
+
+
+                NoUser.text = " Log In Success "
+                Log.v("MainActivity","Log in success")
+                val intent = Intent(this,UserInfoActivity :: class.java )
+                startActivity(intent)
+
+
+
+
+
         }
         val SignupLink : TextView = findViewById<TextView>(R.id.tvSignUpHere)
 
