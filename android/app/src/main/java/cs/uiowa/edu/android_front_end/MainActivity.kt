@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         LoginActivity.setOnClickListener{
             Log.v("MainActivity", "Typed username "+ editTextUsername.text.toString())
             var pass = true
-            val A = getUser(this,editTextUsername.text.toString())
+            val A = getUser(this,editTextUsername.text.toString(),editTextPassword.text.toString())
 
             //Log.v("MainActivity:", "User is")
             if (A == null){//(editTextUsername.text.toString() + " is not an registered user")){
@@ -58,12 +58,14 @@ class MainActivity : AppCompatActivity() {
                 NoUser.text = editTextUsername.text.toString() + " is not an registered user"//A.toString()
                 Log.v("MainActivity","Log in fail, can't find this name in both admin and user")
             }
-
-
+            else if(A == false){
+                NoUser.text = "username exists, but password is not correct"
+            }
+            else{
                 NoUser.text = " Log In Success "
                 Log.v("MainActivity","Log in success")
                 val intent = Intent(this,UserInfoActivity :: class.java )
-                startActivity(intent)
+                startActivity(intent)}
 
 
 
