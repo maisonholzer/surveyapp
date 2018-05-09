@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
 
         SignupLink.setOnClickListener{
             val intent = Intent(this,SignUpActivity :: class.java )
-            Log.i(tag,"Go to Sign Up Click")
+            Log.v(tag,"Go to Sign Up Click")
             startActivity(intent)
         }
 
