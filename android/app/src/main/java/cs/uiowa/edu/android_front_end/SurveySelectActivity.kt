@@ -2,19 +2,16 @@ package cs.uiowa.edu.android_front_end
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.StrictMode
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 import android.widget.Button
 import android.widget.RadioButton
-import kotlinx.android.synthetic.main.activity_survey_select.*
 
 class SurveySelectActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_survey_select)
-/*
+
         val RadioActivity1: RadioButton = findViewById<RadioButton>(R.id.radioButton1)
         RadioActivity1.setOnClickListener{
             val intent = Intent(this,Survey1Activity :: class.java )
@@ -34,8 +31,8 @@ class SurveySelectActivity : AppCompatActivity() {
         RadioActivity4.setOnClickListener{
             val intent = Intent(this,Survey1Activity :: class.java )
             startActivity(intent)
-        } */
-
+        }
+/*
         val radnames = listOf(R.id.radioButton1,R.id.radioButton2,R.id.radioButton3,R.id.radioButton4)
         val radarray = Array<RadioButton>(4) { it -> findViewById(radnames.get(it))}
         // initially make all radio buttons invisible
@@ -43,7 +40,7 @@ class SurveySelectActivity : AppCompatActivity() {
         val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
         StrictMode.setThreadPolicy(policy)
         //Log.v("radio button","set Invisible")
-        Log.v("radio 1",radioButton1.text.toString())
+        Log.v("radio 1",radioButton1.text.toString())*/
         //val RadioActivity1: RadioButton = findViewById<RadioButton>(R.id.radioButton1)
 
         //val A = netdemo(this,radioButton1.text.toString())
@@ -62,11 +59,17 @@ class SurveySelectActivity : AppCompatActivity() {
         }*/
 
 
-            val bNextActivity: Button = findViewById<Button>(R.id.bSurveySelectHome)
-            bNextActivity.setOnClickListener {
+            val bHomeActivity: Button = findViewById<Button>(R.id.bSurveySelectHome)
+            bHomeActivity.setOnClickListener {
 
                 val intent = Intent(this, UserInfoActivity::class.java)
                 startActivity(intent)
             }
+        val bNextActivity: Button = findViewById<Button>(R.id.button4)
+        bNextActivity.setOnClickListener {
+
+            val intent = Intent(this, ThankyouActivity::class.java)
+            startActivity(intent)
+        }
         }
 }

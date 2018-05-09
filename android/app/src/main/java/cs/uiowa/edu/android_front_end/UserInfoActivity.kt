@@ -1,16 +1,23 @@
 package cs.uiowa.edu.android_front_end
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.StrictMode
+import android.support.v7.app.AppCompatActivity
 import android.widget.Button
-import android.widget.EditText
 
 class UserInfoActivity : AppCompatActivity() {
 
+
+    //var editTextUsername2: EditText = findViewById<EditText>(R.id.etUsername2)
+    //var editTextPassword2: EditText = findViewById<EditText>(R.id.etPassword2)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_info)
+        val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.setThreadPolicy(policy)
+        //val A = NetAccess.getUser(MainActivity(), MainActivity()).toString(), editTextPassword.text.toString())
+        //editTextUsername2.text = findViewById<EditText>(R.id.etUsername)
 
         //val editTextUsername: EditText = findViewById<EditText>(R.id.etUsername)
         //val editTextPassword: EditText = findViewById<EditText>(R.id.etPassword)

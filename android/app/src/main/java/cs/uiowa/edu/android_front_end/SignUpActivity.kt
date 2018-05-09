@@ -15,17 +15,17 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
-        val editTextYear:EditText = findViewById<EditText>(R.id.etYear)
-        val editTextName:EditText = findViewById<EditText>(R.id.etName)
+        //val editTextYear:EditText = findViewById<EditText>(R.id.etYear)
+        //val editTextName:EditText = findViewById<EditText>(R.id.etName)
         val editTextUsername:EditText = findViewById<EditText>(R.id.etUsername)
         val editTextPassword:EditText = findViewById<EditText>(R.id.etPassword)
 
         val bSignUpActivity: Button = findViewById<Button>(R.id.bSignUp)
         bSignUpActivity.setOnClickListener{
-            val Name:String = etName.text.toString()
+            //val Name:String = etName.text.toString()
             val Username:String = etUsername.text.toString()
             val Password:String = etPassword.text.toString()
-            val Year:String = etYear.text.toString()
+            //val Year:String = etYear.text.toString()
             /*
             val responseListener = Response.Listener<String> {
                 override fun onRes
