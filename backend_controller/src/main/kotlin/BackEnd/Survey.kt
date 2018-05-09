@@ -51,7 +51,6 @@ class question {
 
 class ResultSummary {
     val surveyID: String
-    // surveySummary value is mutableMapOf<Question ID, MutableMap<Answer , # of times it has been chosen>>
     val surveySummary = mutableMapOf<String,MutableMap<Any,Int>>()
 
     constructor(surveyID: String){
@@ -59,6 +58,7 @@ class ResultSummary {
     }
 
     fun createResultsSummary(surveyID: String){
+        println("BackEnd-Survey - createResultsSummary function")
         ResultSummary(surveyID)
         if (!surveyList.get(surveyID)!!.questions.isEmpty()){
             populateSummary(surveyID)
@@ -66,6 +66,7 @@ class ResultSummary {
     }
 
     fun populateSummary(surveyID:String){
+        println("BackEnd-Survey - populateSummary function")
         for (question in surveyList.get(surveyID)!!.questions){
             val tempMap = mutableMapOf<Any,Int>()
             for (answer in question.answers){
@@ -75,18 +76,21 @@ class ResultSummary {
     }
 
     fun addQuestionResult(qID: String, answer: Any, value: Int){
+        println("BackEnd-Survey - addQuestionResult function")
         if (!surveySummary.containsKey(qID)) {
             val tempMap = mutableMapOf<Any, Int>(Pair<Any,Int>(answer,value))
             surveySummary.put(qID, tempMap)
         }else surveySummary[qID]!!.put(answer,value)
     }
     fun addQuestionToSummary(newQuestion: question) {
+        println("BackEnd-Survey - addQuestionToSummary function")
         val tempMap = mutableMapOf<Any, Int>()
         for (answer in newQuestion.answers) tempMap.put(answer, 0)
         surveySummary.put(newQuestion.qID, tempMap)
     }
 
     fun updateSummaryResults(results: SurveyResults){
+        println("BackEnd-Survey - updateSummaryResults function")
         val tempSummary = summaryList[results.surveyID]!!.surveySummary
         for (question in results.surveyResults){
             val oldVal:Int = tempSummary.get(question.key)?.getValue(question.value) as Int + 1
@@ -105,6 +109,7 @@ class SurveyResults {
     }
 }
 fun readQuestionFile(): MutableMap<String,question>{
+    println("BackEnd-Survey - readQuestionFile function")
     val tempList = mutableMapOf<String,question>()
     var fileReader: BufferedReader? = null
     val questionID = 0
@@ -148,6 +153,7 @@ fun readQuestionFile(): MutableMap<String,question>{
 }
 
 fun readSurveyFile(): MutableMap<String,survey>{
+    println("BackEnd-Survey - readSurveyFile function")
     val tempList = mutableMapOf<String,survey>()
     var fileReader: BufferedReader? = null
     val survID = 0
@@ -192,6 +198,7 @@ fun readSurveyFile(): MutableMap<String,survey>{
 }
 
 fun readSummaryFile(): MutableMap<String,ResultSummary>{
+    println("BackEnd-Survey - readSummaryFile function")
     val tempList = mutableMapOf<String,ResultSummary>()
     var fileReader: BufferedReader? = null
     val survID = 0
@@ -241,6 +248,7 @@ fun readSummaryFile(): MutableMap<String,ResultSummary>{
 }
 
 internal fun writeSurveyFile(){
+    println("BackEnd-Survey - writeSurveyFile function")
     val header = "Survey ID, Title, Questions"
     var fileWriter: FileWriter? = null
 
@@ -280,6 +288,7 @@ internal fun writeSurveyFile(){
 }
 
 internal fun writeQuestionFile(){
+    println("BackEnd-Survey - writeQuestionFile function")
     val header = "Question ID, Question Text, Answers"
     var fileWriter: FileWriter? = null
 
@@ -317,7 +326,8 @@ internal fun writeQuestionFile(){
     }
 }
 
-private fun writeSummaryFile(){
+internal fun writeSummaryFile(){
+    println("BackEnd-Survey - writeSummaryFile function")
     val header = "Survey ID, Question ID, Answers, # of times chosen"
     var fileWriter: FileWriter? = null
 
@@ -357,23 +367,4 @@ private fun writeSummaryFile(){
             e.printStackTrace()
         }
     }
-}
-
-fun main(args: Array<String>) {
-/*
-    val fakeResult = SurveyResults("s1")
-    fakeResult.surveyResults.put("q1","yes")
-    fakeResult.surveyResults.put("q2","maybe")
-
-    summaryList[fakeResult.surveyID]?.updateSummary(fakeResult)
-
-    for (q in summaryList["s1"]!!.surveySummary){
-        println(q.key)
-        for (a in q.value){
-            println("The answer '" + a.key.toString() + "' has been chosen " + a.value.toString() + " times.")
-        }
-
-    }
-*/
-
 }

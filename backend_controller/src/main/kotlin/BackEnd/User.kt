@@ -35,6 +35,7 @@ class Client: User {
 }
 
 fun readAdminFile(): MutableMap<String,Admin>{
+    println("BackEnd-User - readAdminFile function")
     val tempList = mutableMapOf<String,Admin>()
     var fileReader: BufferedReader? = null
 
@@ -78,6 +79,7 @@ fun readAdminFile(): MutableMap<String,Admin>{
 }
 
 fun readClientFile(): MutableMap<String,Client>{
+    println("BackEnd-User - readClientFile function")
     val tempList = mutableMapOf<String,Client>()
     var fileReader: BufferedReader? = null
 
@@ -121,7 +123,8 @@ fun readClientFile(): MutableMap<String,Client>{
     return tempList
 }
 
-internal fun updateAdminFile(){
+fun updateAdminFile(){
+    println("BackEnd-User - updateAdminFile function")
     val header = "username, password"
     var fileWriter: FileWriter? = null
 
@@ -155,7 +158,8 @@ internal fun updateAdminFile(){
     }
 }
 
-internal fun updateClientFile(){
+fun updateClientFile(){
+    println("BackEnd-User - updateClientFile function")
     val header = "username, password, surveys"
     var fileWriter: FileWriter? = null
 
@@ -194,46 +198,4 @@ internal fun updateClientFile(){
             e.printStackTrace()
         }
     }
-}
-/*
-fun RetrieveAdmin(adminID: String): User?{
-    var fileReader: BufferedReader? = null
-    val username = 0
-    val password = 1
-    var Ad: User? = null
-    try {
-        var line: String?
-        fileReader = BufferedReader(FileReader(Paths.get("").toAbsolutePath().toString()+"\\res\\AdminList.csv"))
-        fileReader.readLine()
-        line = fileReader.readLine()
-        while (line != null){
-            val tokens = line.split(",")
-            if (tokens.size > 0 && tokens[username] == adminID){
-                Ad = Admin(tokens[username], tokens[password])
-            }
-            line = fileReader.readLine()
-        }
-    } catch(e: Exception){
-        println("Error during Admin Retrieval")
-        e.printStackTrace()
-    } finally {
-        try {
-            fileReader!!.close()
-        } catch (e: IOException){
-            println("Error Closing File Reader")
-            e.printStackTrace()
-        }
-    }
-    return Ad
-}
-*/
-private fun userName_Available(newUsername: String, userList: List<User>): Boolean{
-    for (users in userList){
-        if (users.username == newUsername) return false
-    }
-    return true
-}
-
-fun main(args: Array<String>) {
-    println(AdminList.get("Trevor")?.pass)
 }
