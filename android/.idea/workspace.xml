@@ -37,8 +37,8 @@
       <file leaf-file-name="NetAccess.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/cs/uiowa/edu/android_front_end/NetAccess.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="68" column="52" lean-forward="false" selection-start-line="68" selection-start-column="52" selection-end-line="68" selection-end-column="52" />
+            <state relative-caret-position="42">
+              <caret line="52" column="63" lean-forward="false" selection-start-line="52" selection-start-column="63" selection-end-line="52" selection-end-column="63" />
               <folding>
                 <element signature="e#40#385#0" expanded="true" />
               </folding>
@@ -49,8 +49,8 @@
       <file leaf-file-name="SurveySelectActivity.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/cs/uiowa/edu/android_front_end/SurveySelectActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="48" column="2" lean-forward="true" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
+            <state relative-caret-position="115">
+              <caret line="52" column="58" lean-forward="false" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="58" />
               <folding>
                 <element signature="e#40#195#0" expanded="true" />
               </folding>
@@ -2243,8 +2243,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/controller/Survey.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/controller/User2.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/controller/Usertest.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/cs/uiowa/edu/android_front_end/NetAccess.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/cs/uiowa/edu/android_front_end/SurveySelectActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/cs/uiowa/edu/android_front_end/NetAccess.kt" />
       </list>
     </option>
   </component>
@@ -2548,7 +2548,7 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32824427" sideWeight="0.51342285" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35114503" sideWeight="0.49030694" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5053435" sideWeight="0.49030694" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32824427" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.48657718" order="7" side_tool="false" content_ui="tabs" />
@@ -2800,8 +2800,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/cs/uiowa/edu/android_front_end/SurveySelectActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="48" column="2" lean-forward="true" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
+        <state relative-caret-position="115">
+          <caret line="52" column="58" lean-forward="false" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="58" />
           <folding>
             <element signature="e#40#195#0" expanded="true" />
           </folding>
@@ -2810,8 +2810,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/cs/uiowa/edu/android_front_end/NetAccess.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="68" column="52" lean-forward="false" selection-start-line="68" selection-start-column="52" selection-end-line="68" selection-end-column="52" />
+        <state relative-caret-position="42">
+          <caret line="52" column="63" lean-forward="false" selection-start-line="52" selection-start-column="63" selection-end-line="52" selection-end-column="63" />
           <folding>
             <element signature="e#40#385#0" expanded="true" />
           </folding>

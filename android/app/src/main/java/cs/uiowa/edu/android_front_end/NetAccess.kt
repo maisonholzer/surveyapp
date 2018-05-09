@@ -46,16 +46,16 @@ object NetAccess {
         Log.v(P.tag,converted + "server test success")
         return converted
     }*/
-    fun jsonop(X: SurveySelectActivity, payload: JSONObject, url: String): JSONObject? {
+    fun jsonop2(P: SurveySelectActivity, payload: JSONObject, url: String): JSONObject? {
         // see https://github.com/DWorkS/VolleyPlus for documentation on VolleyTickle
-        val mRequestTickle = VolleyTickle.newRequestTickle(X as Context)
+        val mRequestTickle = VolleyTickle.newRequestTickle(P as Context)
         val sendJson = JSONObject()
-        val stringRequest= JsonObjectRequest(Request.Method.POST, url, sendJson,
+        val stringRequest= JsonObjectRequest(Request.Method.GET, url, sendJson,
                 Response.Listener { },
                 Response.ErrorListener { })
         mRequestTickle.add(stringRequest)
         val response = mRequestTickle.start()
-        Log.v("response: ",response.statusCode.toString())
+        Log.v("statusCode:",response.statusCode.toString())
         if (response.statusCode == 200) {
             val data = VolleyTickle.parseResponse(response)
             Log.v("data: ", data)
@@ -64,17 +64,18 @@ object NetAccess {
         }
         return null
     }
-    fun getJsonUserForLogin(X: SurveySelectActivity): Usertest {
+
+    fun getJsonUserForLogin(P: SurveySelectActivity): Usertest {
         Log.v("Login:","Getting User")
         val url = "http://192.168.0.2:8080/users/han"
-        val t = jsonop(MainActivity(),JSONObject(),url)
+        val t = jsonop2(P,JSONObject(),url)
         val default = Usertest(mapOf<String,String>())
         if (t == null) return default
         val mapper = Gson() // use Gson to convert JSONObject to Allsurveys
         val conversionType = object : TypeToken<Usertest>(){ }.type
         val converted: Usertest = mapper.fromJson(t.toString(),conversionType)
         Log.v("result:","server test success")
-        Log.v("result",converted.toString())
+
 
         return converted
     }

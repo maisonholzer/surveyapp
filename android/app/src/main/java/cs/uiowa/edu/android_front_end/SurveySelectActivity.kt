@@ -51,7 +51,7 @@ class SurveySelectActivity : AppCompatActivity() {
 
             bNextActivity.setOnClickListener {
                 val A = NetAccess.getJsonUserForLogin(this)
-                Log.v("json message",A.toString())
+                Log.v("json message","success in avtivity page")
                 val intent = Intent(this, UserInfoActivity::class.java)
                 startActivity(intent)
             }
