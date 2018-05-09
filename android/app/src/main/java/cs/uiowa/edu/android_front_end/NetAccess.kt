@@ -8,7 +8,8 @@ import com.android.volley.request.JsonObjectRequest
 import com.android.volley.toolbox.VolleyTickle
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import controller.User
+import controller.Admin
+import controller.Client
 import controller.question
 import controller.survey
 import org.json.JSONObject
@@ -58,23 +59,39 @@ object NetAccess {
         // in another shell before trying this
         val url = "http://192.168.0.2:8080/users/" + name
         val t = jsonop(P, JSONObject(), url)  // sending an empty JSON object
-        if (t?.length() == 3){Log.v("NetAccess:","this is a Client")}
-        else{Log.v("NetAccess:","this is a Admin")}
         //val default = Admin()
         if (t == null) {
             return null
         }//(name+" is not an registered user")}
-        val mapper = Gson()
-        val conversionType = object : TypeToken<User>() {}.type
-        val gotperson: User = mapper.fromJson(t.toString(), conversionType)
-        //val gotperson = Admin(t["username"] as String,
-        // t["pass"] as String)
-        Log.v("NetAccess:", "username is " + gotperson.username)
-        Log.v("NetAccess:", "password is " + gotperson.pass)
-        //if (gotperson is Admin){Log.v("netAccess","this user is Admin")}
-        //if (gotperson !is Client){Log.v("netAccess","this user is Admin")}
-        //Log.v("NetAccess:", "survey is " + gotperson.surveys)
-        return gotperson//t["pass"]as String
+        if (t?.length() == 3){
+            Log.v("NetAccess:","this is a Client")
+            val mapper = Gson()
+            val conversionType = object : TypeToken<Client>() {}.type
+            val gotperson: Client = mapper.fromJson(t.toString(), conversionType)
+            //val gotperson = Admin(t["username"] as String,
+            // t["pass"] as String)
+            Log.v("NetAccess:", "username is " + gotperson.username)
+            Log.v("NetAccess:", "password is " + gotperson.pass)
+            //if (gotperson is Admin){Log.v("netAccess","this user is Admin")}
+            //if (gotperson !is Client){Log.v("netAccess","this user is Admin")}
+            Log.v("NetAccess:", "survey is " + gotperson.surveys)
+            return gotperson//t["pass"]as String
+
+        }
+        else {
+            Log.v("NetAccess:", "this is a Admin")
+            val mapper = Gson()
+            val conversionType = object : TypeToken<Admin>() {}.type
+            val gotperson: Admin = mapper.fromJson(t.toString(), conversionType)
+            //val gotperson = Admin(t["username"] as String,
+            // t["pass"] as String)
+            Log.v("NetAccess:", "username is " + gotperson.username)
+            Log.v("NetAccess:", "password is " + gotperson.pass)
+            //if (gotperson is Admin){Log.v("netAccess","this user is Admin")}
+            //if (gotperson !is Client){Log.v("netAccess","this user is Admin")}
+            //Log.v("NetAccess:", "survey is " + gotperson.surveys)
+            return gotperson//t["pass"]as String
+        }
         /*
         try {
 

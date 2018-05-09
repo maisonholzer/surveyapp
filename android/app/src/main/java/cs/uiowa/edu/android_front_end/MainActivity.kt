@@ -58,12 +58,11 @@ class MainActivity : AppCompatActivity() {
                 NoUser.text = editTextUsername.text.toString() + " is not an registered user"//A.toString()
                 Log.v("MainActivity","Log in fail, can't find this name in both admin and user")
             }
-
-
+            else{
                 NoUser.text = " Log In Success "
                 Log.v("MainActivity","Log in success")
                 val intent = Intent(this,UserInfoActivity :: class.java )
-                startActivity(intent)
+                startActivity(intent)}
 
 
 
