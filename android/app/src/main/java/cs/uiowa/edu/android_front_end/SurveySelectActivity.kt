@@ -2,15 +2,24 @@ package cs.uiowa.edu.android_front_end
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.StrictMode
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.widget.Button
 import android.widget.RadioButton
+import kotlinx.android.synthetic.main.activity_survey_select.*
 
 class SurveySelectActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_survey_select)
+        val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.setThreadPolicy(policy)
+
+        NetAccess.getSurveys(this)
+        radioButton1.text = surveyList["s1"].toString()
+        Log.v("Survey1",surveyList["s1"].toString())
 
         val RadioActivity1: RadioButton = findViewById<RadioButton>(R.id.radioButton1)
         RadioActivity1.setOnClickListener{

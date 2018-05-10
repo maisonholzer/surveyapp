@@ -6,10 +6,12 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.request.JsonObjectRequest
 import com.android.volley.toolbox.VolleyTickle
-import com.fasterxml.jackson.databind.ObjectMapper
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import controller.*
+import controller.Admin
+import controller.Client
+import controller.question
+import controller.survey
 import org.json.JSONObject
 
 
@@ -41,7 +43,7 @@ object NetAccess {
         // change this URL to have the IP address of your machine
         // and make sure netdemo is running edu.uiowa.cs.NettyServer
         // in another shell before trying this
-        val url = "http://192.168.0.2:8080/users/" + name
+        val url = "http://10.11.30.51:8080/users/" + name
         val t = jsonop(P, JSONObject(), url)  // sending an empty JSON object
         //val default = Admin()
         if (t == null) {
@@ -110,20 +112,59 @@ object NetAccess {
         }
         return null
     }
-
+/*
     fun createClient(P: SignUpActivity,n:String,p: String):Response<Any> {
 
         val newUser = User(n,p)
-        val url = "http://192.168.0.2:8080/users/create"
+        val url = "http://10.11.30.51:8080/users/create"
         val t = jsonop2(P, JSONObject(), url)
-        val mapper = ObjectMapper()
-        val jsonString = mapper.writeValueAsString(newUser)
-        val mapper2 = Gson()
-        val conversionType2 = object : TypeToken<Response<Any>>() {}.type
-        val resp: Response<Any> = mapper2.fromJson(t.toString(), conversionType2)
+        val mapper = Gson()
+        val jsonString = mapper.toJson(newUser) // iowahawkobject is your object
 
-        return resp
+        return
     }
+    */
+
+    fun jsonop3(P: SurveySelectActivity, payload: JSONObject, url: String): JSONObject? {
+        // see https://github.com/DWorkS/VolleyPlus for documentation on VolleyTickle
+        val mRequestTickle = VolleyTickle.newRequestTickle(P as Context)
+        val sendJson = JSONObject()
+        val stringRequest= JsonObjectRequest(Request.Method.GET, url, sendJson,
+                Response.Listener { },
+                Response.ErrorListener { })
+        mRequestTickle.add(stringRequest)
+        val response = mRequestTickle.start()
+        Log.v("NetAccess:",response.statusCode.toString())
+        if (response.statusCode == 200) {
+            val data = VolleyTickle.parseResponse(response)
+            Log.v("NetAccess", data)
+            val fields = JSONObject(data)
+            return fields
+        }
+        return null
+    }
+
+    fun getSurveys(P: SurveySelectActivity) {
+        val url = "http://10.11.30.51:8080/users/survey/s"
+        val t = jsonop3(P, JSONObject(), url)
+        var surveyCount = 1
+        var gettingSurveys = true
+        while (gettingSurveys) {
+            try {
+                val t = jsonop3(P, JSONObject(), url+surveyCount)
+                val mapper3 = Gson()
+                val conversionType = object : TypeToken<survey>() {}.type
+                val surveyObject: survey = mapper3.fromJson(t.toString(), conversionType)
+                surveyList.put(surveyObject.sID, surveyObject)
+                Log.v("NetAccess","got a survey")
+                surveyCount += 1
+            } catch (ex: Exception) {
+                Log.v("NetAccess","no survey to get")
+                gettingSurveys = false
+        }
+    }
+
+}
 
 
 

@@ -33,15 +33,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         Log.d(tag,"*** onCreate ***")
 
-        /*val radnames = listOf(R.id.radioButton1,R.id.radioButton2,R.id.radioButton3,R.id.radioButton4)
-        val radarray = Array<RadioButton>(5) {it -> findViewById(radnames.get(it))}
-        // initially make all radio buttons invisible
-        val A = getAllSurveys(this)
-        // nice trick: https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/with-index.html
-        for ((ind,title) in A.surveymap.values.iterator().withIndex()) {
-            radarray[ind].text = title
-            radarray[ind].setVisibility(View.VISIBLE)
-        }*/
 
         val editTextUsername: EditText = findViewById<EditText>(R.id.etUsername)
         var editTextPassword: EditText = findViewById<EditText>(R.id.etPassword)
