@@ -31,7 +31,7 @@ class adminView : View() {
 
                 }
                 bottom = vbox {
-                    button("back") {
+                    button("Log Out") {
                         action {
                             replaceWith(appTest::class)
                         }

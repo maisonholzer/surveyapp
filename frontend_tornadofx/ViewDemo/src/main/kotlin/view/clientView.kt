@@ -58,31 +58,47 @@ class clientView : View() {
                     addClass(inStyle)
 
 
-                    label(name)
-                    label(qtitle)
+
+                    var nameLabel = label(name)
+                    var qLabel = label(qtitle)
 
                     vbox {
-                        button(a1) {
+                        var b1 = button(a1) {
+
                             setOnAction { println("button $a1 pressed"); appClient().sendQuestionData(qtitle, a1) }
                         }
-                        button(a2) {
+                        var b2 = button(a2) {
                             setOnAction { println("button $a2 pressed"); appClient().sendQuestionData(qtitle, a2) }
                         }
-                        button(a3) {
+                        var b3 = button(a3) {
                             setOnAction { println("button $a3 pressed"); appClient().sendQuestionData(qtitle, a3) }
                         }
+                        button("Next ???") {
+                            action { controller.buttonaction(this)
 
-                    }
-                    hbox {
-                        button("Next Question") {
-                            action { controller.buttonaction(this) }
+                                //refreshes button text values to reflect properly when clicked -blake
+                                nameLabel.text = name
+                                qLabel.text = qtitle
+                                b1.text = a1
+                                b2.text = a2
+                                b3.text = a3}
+                        }
+                        button("Next Survey") {
+                            //isVisible = false
+                            action { controller.buttonaction(this)
+                                //refreshes button text values to reflect properly when clicked -blake
+                                nameLabel.text = name
+                                qLabel.text = qtitle
+                                b1.text = a1
+                                b2.text = a2
+                                b3.text = a3}
+
+
                         }
                     }
                 }
                 left = vbox {
-                    button("Next Survey") {
-                        action { controller.buttonaction(this) }
-                    }
+
                 }
             }
         }
@@ -92,6 +108,7 @@ class clientView : View() {
         fun buttonaction(buttonObj: Node) {
             val B = buttonObj as Button
             val text = B.text
+
             // now take specific action depending on button number
             when {
                 (text == "Log out") -> {
@@ -112,7 +129,7 @@ class clientView : View() {
                         surveynumber -= 1
                     }
                 }
-                (text == "Next Question") -> {
+                (text == "Next ???") -> {
                     try {
                         questionnumber += 1
                         var surveyToTake = newSurveyList.get("s"+surveynumber)

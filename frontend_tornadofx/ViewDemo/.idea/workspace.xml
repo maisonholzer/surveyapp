@@ -4,7 +4,171 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/kotlin/view/ViewDemo.kt" description="class demoControl : Controller() {&#10;    fun selectO..." line="47" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09f25ecb-7f08-4cf4-81d3-9261c79e6428" name="Default" comment="" />
+    <list default="true" id="09f25ecb-7f08-4cf4-81d3-9261c79e6428" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/edu/uiowa/cs/Admin.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/edu/uiowa/cs/Client.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/edu/uiowa/cs/LoggingFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/edu/uiowa/cs/RestClient$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/edu/uiowa/cs/RestClient$Companion.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/edu/uiowa/cs/RestClient.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/edu/uiowa/cs/SurveyKt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/edu/uiowa/cs/TestClient.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/edu/uiowa/cs/User.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/edu/uiowa/cs/UserKt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/edu/uiowa/cs/question.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/edu/uiowa/cs/survey.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/controller/RestClient$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/controller/RestClient$Companion.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/controller/RestClient.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/view/appTest$1$1$3$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/view/appTest$1$1$3$1$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/view/appTest$1$1$3$1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/view/appTest$1$1$3$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/view/clientView$$special$$inlined$with$lambda$1$3$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/view/clientView$$special$$inlined$with$lambda$1$3$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/view/clientView$$special$$inlined$with$lambda$1$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/view/clientView$1$1$3$1$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/view/clientView$1$1$3$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/view/clientView$1$1$3$1$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/view/clientView$1$1$3$1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/view/clientView$1$1$3$1$3$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/view/clientView$1$1$3$1$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/view/clientView$1$1$3$1.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/.gradle/4.0/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/../../backend_controller/.gradle/4.0/fileHashes/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/.gradle/4.0/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/../../backend_controller/.gradle/4.0/fileHashes/fileHashes.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/BackEnd/Admin.class" afterPath="$PROJECT_DIR$/../../backend_controller/out/production/classes/BackEnd/Admin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/BackEnd/BackEnd_API$DefaultImpls.class" afterPath="$PROJECT_DIR$/../../backend_controller/out/production/classes/BackEnd/BackEnd_API$DefaultImpls.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/BackEnd/BackEnd_API.class" afterPath="$PROJECT_DIR$/../../backend_controller/out/production/classes/BackEnd/BackEnd_API.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/BackEnd/Client.class" afterPath="$PROJECT_DIR$/../../backend_controller/out/production/classes/BackEnd/Client.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/BackEnd/ResultSummary.class" afterPath="$PROJECT_DIR$/../../backend_controller/out/production/classes/BackEnd/ResultSummary.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/BackEnd/SurveyKt.class" afterPath="$PROJECT_DIR$/../../backend_controller/out/production/classes/BackEnd/SurveyKt.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/BackEnd/SurveyResults.class" afterPath="$PROJECT_DIR$/../../backend_controller/out/production/classes/BackEnd/SurveyResults.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/BackEnd/User.class" afterPath="$PROJECT_DIR$/../../backend_controller/out/production/classes/BackEnd/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/BackEnd/UserKt.class" afterPath="$PROJECT_DIR$/../../backend_controller/out/production/classes/BackEnd/UserKt.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/BackEnd/question.class" afterPath="$PROJECT_DIR$/../../backend_controller/out/production/classes/BackEnd/question.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/BackEnd/survey.class" afterPath="$PROJECT_DIR$/../../backend_controller/out/production/classes/BackEnd/survey.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/META-INF/surveyapplication_main.kotlin_module" afterPath="$PROJECT_DIR$/../../backend_controller/out/production/classes/META-INF/surveyapplication_main.kotlin_module" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/edu/uiowa/cs/JerseyApplication.class" afterPath="$PROJECT_DIR$/../../backend_controller/out/production/classes/edu/uiowa/cs/JerseyApplication.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/edu/uiowa/cs/NettyServer$main$1.class" afterPath="$PROJECT_DIR$/../../backend_controller/out/production/classes/edu/uiowa/cs/NettyServer$main$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/edu/uiowa/cs/NettyServer$main$resourceConfig$1.class" afterPath="$PROJECT_DIR$/../../backend_controller/out/production/classes/edu/uiowa/cs/NettyServer$main$resourceConfig$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/edu/uiowa/cs/NettyServer.class" afterPath="$PROJECT_DIR$/../../backend_controller/out/production/classes/edu/uiowa/cs/NettyServer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/out/production/classes/edu/uiowa/cs/UserResource.class" afterPath="$PROJECT_DIR$/../../backend_controller/out/production/classes/edu/uiowa/cs/UserResource.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/META-INF/ViewDemo_main.kotlin_module" afterPath="$PROJECT_DIR$/out/production/classes/META-INF/ViewDemo_main.kotlin_module" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/app/Styles$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/app/Styles$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/app/Styles$1.class" afterPath="$PROJECT_DIR$/out/production/classes/app/Styles$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/app/Styles$2$1.class" afterPath="$PROJECT_DIR$/out/production/classes/app/Styles$2$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/app/Styles$2.class" afterPath="$PROJECT_DIR$/out/production/classes/app/Styles$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/app/Styles$3$1.class" afterPath="$PROJECT_DIR$/out/production/classes/app/Styles$3$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/app/Styles$3.class" afterPath="$PROJECT_DIR$/out/production/classes/app/Styles$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/app/Styles$4$1.class" afterPath="$PROJECT_DIR$/out/production/classes/app/Styles$4$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/app/Styles$4.class" afterPath="$PROJECT_DIR$/out/production/classes/app/Styles$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/app/Styles$5$1.class" afterPath="$PROJECT_DIR$/out/production/classes/app/Styles$5$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/app/Styles$5$2.class" afterPath="$PROJECT_DIR$/out/production/classes/app/Styles$5$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/app/Styles$5.class" afterPath="$PROJECT_DIR$/out/production/classes/app/Styles$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/app/Styles$Companion.class" afterPath="$PROJECT_DIR$/out/production/classes/app/Styles$Companion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/app/Styles.class" afterPath="$PROJECT_DIR$/out/production/classes/app/Styles.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/app/SurveyApp.class" afterPath="$PROJECT_DIR$/out/production/classes/app/SurveyApp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/controller/AppClientKt.class" afterPath="$PROJECT_DIR$/out/production/classes/controller/AppClientKt.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/controller/LoggingFilter.class" afterPath="$PROJECT_DIR$/out/production/classes/controller/LoggingFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/controller/appClient.class" afterPath="$PROJECT_DIR$/out/production/classes/controller/appClient.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/models/Admin.class" afterPath="$PROJECT_DIR$/out/production/classes/models/Admin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/models/Client.class" afterPath="$PROJECT_DIR$/out/production/classes/models/Client.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/models/User.class" afterPath="$PROJECT_DIR$/out/production/classes/models/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/models/UserKt.class" afterPath="$PROJECT_DIR$/out/production/classes/models/UserKt.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/models/question.class" afterPath="$PROJECT_DIR$/out/production/classes/models/question.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/models/survey.class" afterPath="$PROJECT_DIR$/out/production/classes/models/survey.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/AppTestKt.class" afterPath="$PROJECT_DIR$/out/production/classes/view/AppTestKt.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/ClientViewKt.class" afterPath="$PROJECT_DIR$/out/production/classes/view/ClientViewKt.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/adminV$root$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/adminV$root$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/adminV$root$1$2$1$$special$$inlined$column$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/adminV$root$1$2$1$$special$$inlined$column$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/adminV$root$1$2$1$$special$$inlined$column$2.class" afterPath="$PROJECT_DIR$/out/production/classes/view/adminV$root$1$2$1$$special$$inlined$column$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/adminV$root$1$2$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/adminV$root$1$2$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/adminV$root$1$2$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/adminV$root$1$2$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/adminV$root$1$2.class" afterPath="$PROJECT_DIR$/out/production/classes/view/adminV$root$1$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/adminV$root$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/adminV$root$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/adminV.class" afterPath="$PROJECT_DIR$/out/production/classes/view/adminV.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$inject$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$inject$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$inject$2.class" afterPath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$inject$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$inject$3.class" afterPath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$inject$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$with$lambda$1$1$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$with$lambda$1$1$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$with$lambda$1$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$with$lambda$1$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$with$lambda$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$with$lambda$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$with$lambda$1$2$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$with$lambda$1$2$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$with$lambda$1$2$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$with$lambda$1$2$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$with$lambda$1$2$2$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$with$lambda$1$2$2$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$with$lambda$1$2$2.class" afterPath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$with$lambda$1$2$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$with$lambda$1$2$3$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$with$lambda$1$2$3$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$with$lambda$1$2$3.class" afterPath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$with$lambda$1$2$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$with$lambda$1$2.class" afterPath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$with$lambda$1$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$with$lambda$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/adminView$$special$$inlined$with$lambda$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/adminView$1$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/adminView$1$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/adminView$1$1$3.class" afterPath="$PROJECT_DIR$/out/production/classes/view/adminView$1$1$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/adminView.class" afterPath="$PROJECT_DIR$/out/production/classes/view/adminView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/appTest$$special$$inlined$with$lambda$1$1$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/appTest$$special$$inlined$with$lambda$1$1$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/appTest$$special$$inlined$with$lambda$1$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/appTest$$special$$inlined$with$lambda$1$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/appTest$$special$$inlined$with$lambda$1$1$2$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/appTest$$special$$inlined$with$lambda$1$1$2$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/appTest$$special$$inlined$with$lambda$1$1$2.class" afterPath="$PROJECT_DIR$/out/production/classes/view/appTest$$special$$inlined$with$lambda$1$1$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/appTest$$special$$inlined$with$lambda$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/appTest$$special$$inlined$with$lambda$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/appTest$$special$$inlined$with$lambda$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/appTest$$special$$inlined$with$lambda$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/appTest$1$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/appTest$1$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/appTest$1$1$2.class" afterPath="$PROJECT_DIR$/out/production/classes/view/appTest$1$1$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/appTest$1$1$3$pass$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/appTest$1$1$3$pass$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/appTest$appControl.class" afterPath="$PROJECT_DIR$/out/production/classes/view/appTest$appControl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/appTest.class" afterPath="$PROJECT_DIR$/out/production/classes/view/appTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/clientV$root$1$1$1$$special$$inlined$column$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/clientV$root$1$1$1$$special$$inlined$column$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/clientV$root$1$1$1$$special$$inlined$column$2.class" afterPath="$PROJECT_DIR$/out/production/classes/view/clientV$root$1$1$1$$special$$inlined$column$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/clientV$root$1$1$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/clientV$root$1$1$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/clientV$root$1$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/clientV$root$1$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/clientV$root$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/clientV$root$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/clientV$root$1$2.class" afterPath="$PROJECT_DIR$/out/production/classes/view/clientV$root$1$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/clientV$root$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/clientV$root$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/clientV.class" afterPath="$PROJECT_DIR$/out/production/classes/view/clientV.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/clientView$$special$$inlined$with$lambda$1$1$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/clientView$$special$$inlined$with$lambda$1$1$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/clientView$$special$$inlined$with$lambda$1$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/clientView$$special$$inlined$with$lambda$1$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/clientView$$special$$inlined$with$lambda$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/clientView$$special$$inlined$with$lambda$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/clientView$$special$$inlined$with$lambda$1$2$1$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/clientView$$special$$inlined$with$lambda$1$2$1$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/clientView$$special$$inlined$with$lambda$1$2$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/clientView$$special$$inlined$with$lambda$1$2$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/clientView$$special$$inlined$with$lambda$1$2$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/clientView$$special$$inlined$with$lambda$1$2$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/clientView$$special$$inlined$with$lambda$1$2.class" afterPath="$PROJECT_DIR$/out/production/classes/view/clientView$$special$$inlined$with$lambda$1$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/clientView$$special$$inlined$with$lambda$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/clientView$$special$$inlined$with$lambda$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/clientView$1$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/clientView$1$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/clientView$appControl.class" afterPath="$PROJECT_DIR$/out/production/classes/view/clientView$appControl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/clientView.class" afterPath="$PROJECT_DIR$/out/production/classes/view/clientView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/demo$root$1$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/demo$root$1$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/demo$root$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/demo$root$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/demo$root$1$2$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/demo$root$1$2$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/demo$root$1$2.class" afterPath="$PROJECT_DIR$/out/production/classes/view/demo$root$1$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/demo$root$1$3$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/demo$root$1$3$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/demo$root$1$3$2.class" afterPath="$PROJECT_DIR$/out/production/classes/view/demo$root$1$3$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/demo$root$1$3.class" afterPath="$PROJECT_DIR$/out/production/classes/view/demo$root$1$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/demo$root$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/demo$root$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/demo.class" afterPath="$PROJECT_DIR$/out/production/classes/view/demo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/demoControl.class" afterPath="$PROJECT_DIR$/out/production/classes/view/demoControl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/surveyV$root$1$1$1$$special$$inlined$column$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/surveyV$root$1$1$1$$special$$inlined$column$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/surveyV$root$1$1$1$$special$$inlined$column$2.class" afterPath="$PROJECT_DIR$/out/production/classes/view/surveyV$root$1$1$1$$special$$inlined$column$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/surveyV$root$1$1$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/surveyV$root$1$1$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/surveyV$root$1$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/surveyV$root$1$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/surveyV$root$1$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/surveyV$root$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/surveyV$root$1$2.class" afterPath="$PROJECT_DIR$/out/production/classes/view/surveyV$root$1$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/surveyV$root$1.class" afterPath="$PROJECT_DIR$/out/production/classes/view/surveyV$root$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/view/surveyV.class" afterPath="$PROJECT_DIR$/out/production/classes/view/surveyV.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/.idea/modules/surveyapplication_main.iml" afterPath="$PROJECT_DIR$/../../backend_controller/.idea/modules/surveyapplication_main.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/.idea/modules/surveyapplication_test.iml" afterPath="$PROJECT_DIR$/../../backend_controller/.idea/modules/surveyapplication_test.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../backend_controller/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/res/AdminList.csv" afterPath="$PROJECT_DIR$/../../backend_controller/res/AdminList.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/res/ClientList.csv" afterPath="$PROJECT_DIR$/../../backend_controller/res/ClientList.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/res/QuestionList.csv" afterPath="$PROJECT_DIR$/../../backend_controller/res/QuestionList.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../backend_controller/res/SurveyList.csv" afterPath="$PROJECT_DIR$/../../backend_controller/res/SurveyList.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/ViewDemo_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/ViewDemo_main.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/ViewDemo_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/ViewDemo_test.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/app/Styles.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/app/Styles.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/view/adminView.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/view/adminView.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/kotlin/view/clientView.kt" afterPath="$PROJECT_DIR$/src/main/kotlin/view/clientView.kt" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -15,6 +179,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/ViewDemo$Test_App.coverage" NAME="Test App Coverage Results" MODIFIED="1525909677099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -22,11 +189,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="clientView.kt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="clientView.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/view/clientView.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="677">
-              <caret line="132" column="1" lean-forward="false" selection-start-line="132" selection-start-column="1" selection-end-line="132" selection-end-column="1" />
+            <state relative-caret-position="391">
+              <caret line="83" column="45" lean-forward="false" selection-start-line="83" selection-start-column="45" selection-end-line="83" selection-end-column="45" />
               <folding>
                 <element signature="e#14#536#0" expanded="true" />
               </folding>
@@ -34,11 +201,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="appClient.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="appClient.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/controller/appClient.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3075">
-              <caret line="205" column="29" lean-forward="false" selection-start-line="205" selection-start-column="29" selection-end-line="205" selection-end-column="29" />
+            <state relative-caret-position="119">
+              <caret line="100" column="34" lean-forward="false" selection-start-line="100" selection-start-column="34" selection-end-line="100" selection-end-column="34" />
               <folding>
                 <element signature="e#20#319#0" expanded="true" />
               </folding>
@@ -46,11 +213,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Styles.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/app/Styles.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="50" column="25" lean-forward="false" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="adminView.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/view/adminView.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+            <state relative-caret-position="1156">
+              <caret line="80" column="31" lean-forward="false" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SurveyApp.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/app/SurveyApp.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -59,8 +246,8 @@
       <file leaf-file-name="Survey.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/models/Survey.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+            <state relative-caret-position="85">
+              <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -69,7 +256,7 @@
       <file leaf-file-name="appTest.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/view/appTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1324">
+            <state relative-caret-position="680">
               <caret line="91" column="1" lean-forward="false" selection-start-line="91" selection-start-column="1" selection-end-line="91" selection-end-column="1" />
               <folding>
                 <element signature="e#14#403#0" expanded="true" />
@@ -81,8 +268,8 @@
       <file leaf-file-name="User.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/models/User.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="66" lean-forward="false" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
+            <state relative-caret-position="204">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -109,7 +296,7 @@
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
       <map>
-        <entry key="$PROJECT_DIR$" value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0" />
+        <entry key="$PROJECT_DIR$" value="C:\Users\birons\.gradle\wrapper\dists\gradle-4.0-bin\3p92xsbhik5vmig8i90n16yxc\gradle-4.0" />
       </map>
     </option>
     <option name="myGradleVersions">
@@ -294,7 +481,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4572815419000" />
+        <entry key="$PROJECT_DIR$" value="4577716518849" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
         <entry key="$PROJECT_DIR$/build.gradle" value="1912576974" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="975608090" />
@@ -348,75 +535,75 @@
               <option name="name" value="ViewDemo" />
               <option name="projectBuildClasspath">
                 <list>
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-script-kotlin-compiler-plugin-0.9.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-runtime-api-info-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-script-kotlin-tooling-builders-0.9.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-native-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-logging-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-script-kotlin-tooling-models-0.9.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-wrapper-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-model-core-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-core-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-installation-beacon-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-base-services-groovy-4.0.jar" />
                   <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/ant-1.9.6.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-process-services-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/groovy-all-2.4.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-script-kotlin-0.9.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-cli-4.0.jar" />
                   <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/ant-launcher-1.9.6.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-base-services-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-base-services-groovy-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-cli-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-core-4.0.jar" />
                   <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-docs-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-messaging-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-installation-beacon-4.0.jar" />
                   <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-jvm-services-4.0.jar" />
                   <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-launcher-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-base-services-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-logging-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-messaging-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-model-core-4.0.jar" />
                   <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-model-groovy-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-native-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-process-services-4.0.jar" />
                   <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-resources-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-runtime-api-info-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-script-kotlin-0.9.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-script-kotlin-compiler-plugin-0.9.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-script-kotlin-tooling-builders-0.9.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-script-kotlin-tooling-models-0.9.0.jar" />
                   <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-tooling-api-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-javascript-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-platform-native-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-jacoco-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-plugins-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-build-comparison-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-language-native-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-plugin-use-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-ide-play-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-language-scala-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-tooling-api-builders-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/gradle-wrapper-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/groovy-all-2.4.11.jar" />
                   <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-announce-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-ear-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-publish-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-antlr-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-build-cache-http-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-build-comparison-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-build-init-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-code-quality-4.0.jar" />
                   <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-composite-builds-4.0.jar" />
                   <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-dependency-management-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-testing-native-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-platform-base-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-language-jvm-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-plugin-development-4.0.jar" />
                   <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-diagnostics-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-ide-native-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-build-cache-http-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-workers-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-osgi-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-language-java-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-language-groovy-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-antlr-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-reporting-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-platform-play-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-ear-4.0.jar" />
                   <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-ide-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-scala-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-resources-http-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-ide-native-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-ide-play-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-ivy-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-jacoco-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-javascript-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-language-groovy-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-language-java-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-language-jvm-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-language-native-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-language-scala-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-maven-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-osgi-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-platform-base-4.0.jar" />
                   <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-platform-jvm-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-platform-native-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-platform-play-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-plugin-development-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-plugin-use-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-plugins-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-publish-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-reporting-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-resources-http-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-resources-s3-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-resources-sftp-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-scala-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-signing-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-test-kit-4.0.jar" />
                   <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-testing-base-4.0.jar" />
                   <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-testing-jvm-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-build-init-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-maven-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-resources-sftp-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-signing-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-resources-s3-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-code-quality-4.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-test-kit-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-testing-native-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-tooling-api-builders-4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-workers-4.0.jar" />
                   <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/ivy-2.2.0.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.0-bin/3p92xsbhik5vmig8i90n16yxc/gradle-4.0/lib/plugins/gradle-ivy-4.0.jar" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/java" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/groovy" />
                 </list>
@@ -424,11 +611,6 @@
             </ExternalProjectBuildClasspathPojo>
           </value>
         </entry>
-      </map>
-    </option>
-    <option name="projectSyncType">
-      <map>
-        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
       </map>
     </option>
   </component>
@@ -449,22 +631,22 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/controller/LocalHost.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/view/Login.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/view/userView.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/app/Styles.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/controller/JSON.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/controller/Client.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/models/User.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/models/Survey.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/view/clientView.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/view/appTest.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/view/adminView.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/controller/appClient.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/app/Styles.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/view/adminView.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/view/clientView.kt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="270" />
     <option name="width" value="1440" />
-    <option name="height" value="810" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -484,9 +666,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -548,11 +727,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../backend_controller/src/main/kotlin/Server.kt" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -582,12 +764,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Test App">
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HEIGHT" value="0" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="WIDTH" value="0" />
-      <module />
-    </configuration>
     <configuration name="Test App" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="app.SurveyApp" />
@@ -601,6 +777,12 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="ViewDemo_main" />
       <envs />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HEIGHT" value="0" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="WIDTH" value="0" />
+      <module />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -636,31 +818,18 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-    </configuration>
-    <configuration name="test" type="TORNADOFX_RUNCONFIGURATION" factoryName="TornadoFX Configuration Factory" run-type="View" view-class="view.demo" live-views="false" live-stylesheets="false" dump-stylesheets="false">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="RUN_TYPE" value="View" />
-      <option name="VIEW_CLASS_NAME" value="view.demo" />
-      <option name="LIVE_STYLESHEETS" value="false" />
-      <option name="DUMP_STYLESHEETS" value="false" />
-      <option name="LIVE_VIEWS" value="false" />
-      <option name="MAIN_CLASS_NAME" value="tornadofx.App" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="ViewDemo_main" />
-      <envs />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -689,11 +858,24 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+    <configuration name="test" type="TORNADOFX_RUNCONFIGURATION" factoryName="TornadoFX Configuration Factory" run-type="View" view-class="view.demo" live-views="false" live-stylesheets="false" dump-stylesheets="false">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="RUN_TYPE" value="View" />
+      <option name="VIEW_CLASS_NAME" value="view.demo" />
+      <option name="LIVE_STYLESHEETS" value="false" />
+      <option name="DUMP_STYLESHEETS" value="false" />
+      <option name="LIVE_VIEWS" value="false" />
+      <option name="MAIN_CLASS_NAME" value="tornadofx.App" />
+      <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ViewDemo_main" />
+      <envs />
     </configuration>
     <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.Test App" />
@@ -732,34 +914,35 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="810" extended-state="0" />
+    <frame x="270" y="0" width="1440" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25034964" sideWeight="0.40915594" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24946466" sideWeight="0.36235955" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20670392" sideWeight="0.5035765" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25034964" sideWeight="0.59084404" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24946466" sideWeight="0.6376405" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935393" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24320458" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24297753" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23916084" sideWeight="0.49642345" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -770,6 +953,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
     <MESSAGE value="updated structure" />
     <option name="LAST_COMMIT_MESSAGE" value="updated structure" />
   </component>
@@ -780,13 +966,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/models/Survey.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/no.tornado/tornadofx/1.7.14/72efd2d7e0dc4523ad3ff6499170f866c21bb944/tornadofx-1.7.14-sources.jar!/tornadofx/Component.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
@@ -958,39 +1137,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/controller/LocalHost.kt" />
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/view/Login.kt" />
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/app/Styles.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="93" column="1" lean-forward="false" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/controller/JSON.kt" />
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/controller/Client.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/models/Survey.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/app/SurveyApp.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/controller/Client.kt" />
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/view/ViewDemo.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -999,27 +1147,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/models/User.kt">
+    <entry file="file://$PROJECT_DIR$/../../backend_controller/src/main/kotlin/Server.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="66" lean-forward="false" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/view/clientView.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/models/User.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="132" column="1" lean-forward="false" selection-start-line="132" selection-start-column="1" selection-end-line="132" selection-end-column="1" />
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/app/Styles.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="50" column="25" lean-forward="false" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/controller/appClient.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="100" column="34" lean-forward="false" selection-start-line="100" selection-start-column="34" selection-end-line="100" selection-end-column="34" />
           <folding>
-            <element signature="e#14#536#0" expanded="true" />
+            <element signature="e#20#319#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/view/appTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1324">
+        <state relative-caret-position="680">
           <caret line="91" column="1" lean-forward="false" selection-start-line="91" selection-start-column="1" selection-end-line="91" selection-end-column="1" />
           <folding>
             <element signature="e#14#403#0" expanded="true" />
@@ -1029,18 +1193,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/view/adminView.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+        <state relative-caret-position="1156">
+          <caret line="80" column="31" lean-forward="false" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/controller/appClient.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/app/SurveyApp.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3075">
-          <caret line="205" column="29" lean-forward="false" selection-start-line="205" selection-start-column="29" selection-end-line="205" selection-end-column="29" />
+        <state relative-caret-position="68">
+          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/models/Survey.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/view/clientView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="83" column="45" lean-forward="false" selection-start-line="83" selection-start-column="45" selection-end-line="83" selection-end-column="45" />
           <folding>
-            <element signature="e#20#319#0" expanded="true" />
+            <element signature="e#14#536#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -48,7 +48,7 @@ class Styles : Stylesheet() {
         }
         inStyle {
             padding = box(25.px)
-            fontSize = 25.px
+            fontSize = 18.px
             fontWeight = FontWeight.BOLD
             prefWidth = 200.px
             prefHeight = 500.px
@@ -63,7 +63,7 @@ class Styles : Stylesheet() {
         }
         form and adminStyle {
             padding = box(25.px)
-            fontSize = 20.px
+            fontSize = 15.px
             fontWeight = FontWeight.BOLD
             prefWidth = appWidth
             prefHeight = appHeight
