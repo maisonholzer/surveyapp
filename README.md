@@ -1,3 +1,6 @@
+In this project, my assigned role wa for Networking, but I ended up working on front end in TornadoFX as well and wrote most 
+of the code for it.  I also helped with debugging the Back End and created all functions for the Back End to work with the 
+network.
 
 Team Members and Roles:
 
